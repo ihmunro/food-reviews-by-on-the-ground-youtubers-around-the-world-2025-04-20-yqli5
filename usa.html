@@ -1,0 +1,1619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA Food Review YouTubers | State-by-State Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e53e3e;
+            --secondary-color: #f87171;
+            --text-color: #374151;
+            --bg-color: #f9fafb;
+            --card-color: #ffffff;
+            --highlight-color: #fecaca;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .state-section {
+            scroll-margin-top: 120px;
+        }
+        
+        #back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 99;
+            cursor: pointer;
+            background-color: var(--primary-color);
+        }
+        
+        .state-nav-item.active {
+            border-bottom: 3px solid var(--primary-color);
+            font-weight: 600;
+        }
+        
+        @media print {
+            #back-to-top, 
+            #search-container,
+            #filter-container {
+                display: none !important;
+            }
+            
+            .state-section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold text-red-600">USA Food Review YouTubers</h1>
+                    <p class="text-gray-600 text-sm md:text-base">State-by-State Directory of America's Top Food Reviewers</p>
+                </div>
+
+                <!-- Search Bar -->
+                <div id="search-container" class="w-full md:w-1/3">
+                    <div class="relative">
+                        <input type="text" id="search-input" placeholder="Search YouTubers..." 
+                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        <button class="absolute right-3 top-2.5 text-gray-400">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Filter and State Navigation -->
+        <div class="bg-gray-100 py-2 overflow-x-auto">
+            <div class="container mx-auto px-4">
+                <div id="filter-container" class="flex items-center mb-2 md:mb-0">
+                    <label class="mr-2 text-sm font-medium text-gray-700">Filter by:</label>
+                    <select id="subscriber-filter" class="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-red-500">
+                        <option value="all">All Subscribers</option>
+                        <option value="mega">Mega (1M+)</option>
+                        <option value="macro">Macro (100K-1M)</option>
+                        <option value="micro">Micro (10K-100K)</option>
+                        <option value="nano">Nano (under 10K)</option>
+                    </select>
+                    <select id="content-filter" class="ml-2 text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-red-500">
+                        <option value="all">All Content Types</option>
+                        <option value="restaurant">Restaurant Reviews</option>
+                        <option value="street">Street Food</option>
+                        <option value="fast-food">Fast Food</option>
+                        <option value="home-cooking">Home Cooking</option>
+                        <option value="travel">Food + Travel</option>
+                    </select>
+                </div>
+
+                <!-- State Navigation -->
+                <div id="state-nav" class="flex space-x-3 md:space-x-6 py-1 overflow-x-auto hide-scrollbar text-sm whitespace-nowrap">
+                    <a href="#california" class="state-nav-item px-1 py-1 hover:text-red-600">California</a>
+                    <a href="#new-york" class="state-nav-item px-1 py-1 hover:text-red-600">New York</a>
+                    <a href="#texas" class="state-nav-item px-1 py-1 hover:text-red-600">Texas</a>
+                    <a href="#florida" class="state-nav-item px-1 py-1 hover:text-red-600">Florida</a>
+                    <a href="#illinois" class="state-nav-item px-1 py-1 hover:text-red-600">Illinois</a>
+                    <a href="#pennsylvania" class="state-nav-item px-1 py-1 hover:text-red-600">Pennsylvania</a>
+                    <a href="#ohio" class="state-nav-item px-1 py-1 hover:text-red-600">Ohio</a>
+                    <a href="#georgia" class="state-nav-item px-1 py-1 hover:text-red-600">Georgia</a>
+                    <a href="#michigan" class="state-nav-item px-1 py-1 hover:text-red-600">Michigan</a>
+                    <a href="#washington" class="state-nav-item px-1 py-1 hover:text-red-600">Washington</a>
+                    <a href="#massachusetts" class="state-nav-item px-1 py-1 hover:text-red-600">Massachusetts</a>
+                    <a href="#colorado" class="state-nav-item px-1 py-1 hover:text-red-600">Colorado</a>
+                    <a href="#arizona" class="state-nav-item px-1 py-1 hover:text-red-600">Arizona</a>
+                    <a href="#tennessee" class="state-nav-item px-1 py-1 hover:text-red-600">Tennessee</a>
+                    <a href="#minnesota" class="state-nav-item px-1 py-1 hover:text-red-600">Minnesota</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- No results message (hidden by default) -->
+        <div id="no-results" class="hidden text-center py-10">
+            <i class="fas fa-search text-5xl text-gray-400 mb-4"></i>
+            <h3 class="text-2xl font-semibold text-gray-600">No results found</h3>
+            <p class="text-gray-500 mt-2">Try adjusting your search or filter criteria</p>
+        </div>
+
+        <!-- California Section -->
+        <section id="california" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">California</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Golden State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Keith Lee</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                8.7M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Known for his honest food reviews across California, especially in Los Angeles. His straightforward delivery and 1-10 rating system has made him one of TikTok's most influential food critics who expanded to YouTube.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/@keith_lee125" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="mega" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Mark Wiens</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                9.6M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">While he travels globally, Mark frequently features California's diverse food scene. Known for his expressive reactions and deep appreciation for authentic cuisine from street food to high-end restaurants.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA (Base)</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/MarkWiens" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="mega" data-content="restaurant street travel fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Best Ever Food Review Show</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                8.9M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Sonny Side frequently features California's food scene in his global adventures. His content includes special episodes on California cuisine, exploring everything from food trucks to high-end restaurants.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA (When in USA)</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/BestEverFoodReviewShow" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Smokin' & Grillin' with AB</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                930K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">AB brings Southern California BBQ and cooking to life with his engaging tutorials and food reviews. He combines home cooking with visits to local restaurants, featuring authentic Californian flavors.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Southern California</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SmokinAndGrillinWithAB" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Foodie Fam</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                457K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specializing in California food scene with a focus on Los Angeles and San Francisco. They dive into hidden gems, trendy restaurants, and authentic family-owned establishments, highlighting diverse cultural cuisines.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/FoodieFam" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Kevin Natto</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                223K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">LA-based food blogger focusing on the diverse culinary scene in Southern California. Known for his comprehensive food tours of ethnic neighborhoods and honest restaurant reviews.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/KevinNatto" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">SoCal Food Reviews</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                76K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to exploring Southern California's food scene from San Diego to Los Angeles. Their reviews cover everything from taco trucks to upscale dining, with an emphasis on local favorites.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Southern California</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SoCalFoodReviews" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Philip Wang</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                354K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Co-founder of Wong Fu Productions who branched out into food content. Focuses primarily on Asian cuisine in California, visiting authentic restaurants and exploring fusion concepts throughout the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PhilipWang" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Bay Area Eats</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                67K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specializing in San Francisco Bay Area restaurants and food trucks. Covers everything from Michelin-starred establishments to hole-in-the-wall gems, highlighting the region's diverse food culture.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>San Francisco, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/BayAreaEats" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="fast-food restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Nate Eats LA</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                43K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Devoted to exploring Los Angeles food scene with a focus on affordability. Reviews range from fast food to food courts and indie restaurants, with particular emphasis on finding quality food at reasonable prices.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Los Angeles, CA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/NateEatsLA" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- New York Section -->
+        <section id="new-york" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">New York</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Empire State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">TheReportOfTheWeek</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                3.6M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Known as "Reviewbrah," he conducts formal fast food reviews in suit and tie. His eloquent, detailed analysis of common fast food items has earned him cult status in the food review community.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheReportOfTheWeek" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">James Andrews</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                423K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Reviews the best restaurants in New York City, from Michelin-starred establishments to local favorites. His content provides in-depth looks at NYC's dining scene with high-quality production.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/@Jamesnu" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="mega" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Strictly Dumpling</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                4.7M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Mikey Chen explores New York's diverse food scene with enthusiasm, especially focusing on Asian cuisine. His channel features everything from street food to high-end dining across NYC.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/strictlydumpling" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Food Insider</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                11.3M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">While covering food worldwide, their NYC content is extensive. The channel explores iconic New York foods, hidden gems, and viral food trends throughout the city's five boroughs.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/FoodInsider" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">NY Food Reviews</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                89K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to reviewing restaurants across New York, from fine dining to food trucks. Focuses on authentic, detailed reviews of both established venues and up-and-coming spots throughout the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/NYFoodReviews" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Dave Portnoy</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                1.1M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Known for his "One Bite Pizza Reviews," where he rates New York pizza shops on a scale of 1-10. His straightforward, sometimes controversial style has made him a notable figure in NYC food criticism.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/OneBitePizzaReviews" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">The Food Ranger NYC</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                56K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">A spin-off from the main Food Ranger channel focusing specifically on New York City's diverse food scene. Explores ethnic neighborhoods, food markets, and hidden culinary gems across the five boroughs.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheFoodRangerNYC" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">The Food Guy NYC</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                41K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Offers honest, unpretentious reviews of New York City's food scene. Focuses primarily on affordable eats and neighborhood spots that locals frequent rather than tourist destinations.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheFoodGuyNYC" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">NYC Food Guide</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                78K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Comprehensive guides to eating in New York City neighborhoods. Each video focuses on a specific area, providing insights into the best restaurants, food trucks, and markets to visit as a local or tourist.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/NYCFoodGuide" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Hungry in New York</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                34K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores both classic New York food institutions and trendy new spots. Features in-depth interviews with chefs and restaurant owners, providing context and stories behind the food.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>New York City, NY</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/HungryInNewYork" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Texas Section -->
+        <section id="texas" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Texas</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Lone Star State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Texas Eats</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                356K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Covers the diverse Texas food scene with a focus on BBQ, Tex-Mex, and regional specialties. Features restaurants across major cities including Austin, Dallas, Houston, and San Antonio.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Texas</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TexasEats" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">BBQ with Franklin</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                478K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Hosted by Aaron Franklin of Franklin Barbecue in Austin, this channel focuses on Texas BBQ techniques and reviews. Features visits to iconic barbecue joints across the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Austin, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/BBQwithFranklin" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Houston Food Finder</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                87K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specializes in exploring Houston's diverse culinary landscape, from food trucks to high-end dining. Known for highlighting international cuisines found throughout Texas's most diverse city.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Houston, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/HoustonFoodFinder" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">The Texas Bucket List</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                112K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Features must-visit food destinations across Texas, with special focus on small towns and hidden gems. Covers the state's iconic dishes and regional specialties that define Texas cuisine.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheTexasBucketList" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Sorted Food Texas</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                2.5M Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">While not exclusively Texas-based, they create extensive Texas food tour content, exploring everything from Austin to Dallas and exploring iconic Texas specialties like BBQ and Tex-Mex.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/user/sortedfood" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Dallas Food Snobs</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                45K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on the Dallas food scene with honest reviews of upscale restaurants, food trucks, and everything in between. Known for their detailed critiques and comprehensive coverage of DFW dining.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Dallas, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/DallasFoodSnobs" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Austin Food Adventures</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                56K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to Austin's eclectic food scene, covering everything from food trucks to upscale dining. Features in-depth looks at Austin's iconic food culture and emerging culinary trends.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Austin, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/AustinFoodAdventures" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Texas BBQ Trail</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                77K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specializes in reviewing Texas barbecue joints along the famous BBQ trail. Visits legendary spots like Snow's, Louie Mueller, and newer establishments, providing detailed analysis of smoking techniques and flavors.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Central Texas</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TexasBBQTrail" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">San Antonio Eats</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                39K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on San Antonio's rich culinary heritage, with special emphasis on Tex-Mex, Mexican, and local specialties. Explores both tourist favorites and local hidden gems throughout the city.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>San Antonio, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SanAntonioEats" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="nano" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Texas Taco Trail</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                28K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to finding and reviewing the best tacos across Texas. From border town street vendors to urban taco trucks, this channel documents the diverse taco culture throughout the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, TX</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TexasTacoTrail" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Florida Section -->
+        <section id="florida" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Florida</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Sunshine State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Florida Food & Travel</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                87K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores diverse food scenes across Florida, from Miami to the Panhandle. Features seafood, Cuban cuisine, and unique Florida specialties while highlighting the state's diverse culinary traditions.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/FloridaFoodAndTravel" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Miami Food Chronicles</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                125K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specialized in Miami's vibrant food scene, covering Cuban, Latin American, and international cuisine. Features in-depth restaurant reviews and street food explorations throughout Miami-Dade County.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Miami, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/MiamiFoodChronicles" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Orlando Food Scene</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                62K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Covers both theme park dining and local Orlando restaurants. Their content features detailed food reviews from Disney World and Universal to hidden gems in Orlando neighborhoods.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Orlando, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/OrlandoFoodScene" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Tampa Bay Food Spots</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                45K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to exploring Tampa Bay's evolving food scene from food halls to upscale dining. Covers St. Petersburg, Clearwater, and Tampa restaurants with detailed reviews and chef interviews.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Tampa Bay, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TampaBayFoodSpots" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Disney Food Blog</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                768K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specializes in reviewing Disney World restaurants, snacks, and food events. Their comprehensive coverage includes everything from quick-service stands to fine dining throughout Disney properties in Florida.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Orlando, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/DisneyFoodBlog" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Key West Food Critic</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                31K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focused on the unique culinary scene in the Florida Keys. Reviews seafood restaurants, tropical-themed establishments, and local specialties unique to this distinctive part of Florida.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Key West, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/KeyWestFoodCritic" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">South Florida Food Hunter</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                53K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores cuisine throughout Broward, Miami-Dade, and Palm Beach counties. Features diverse restaurants reflecting South Florida's multicultural population, with emphasis on Latin American and Caribbean food.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>South Florida</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SouthFloridaFoodHunter" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Jacksonville Foodie</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                34K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to North Florida's largest city and its emerging food scene. Reviews range from Southern classics to innovative new restaurants, showcasing Jacksonville's growing culinary diversity.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Jacksonville, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/JacksonvilleFoodie" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Gulf Coast Cuisine</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                38K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on Florida's west coast from Naples to Pensacola. Specializes in seafood reviews and Gulf Coast specialties, highlighting restaurants with views of Florida's famous sunsets.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Gulf Coast, FL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/GulfCoastCuisine" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Check, Please! South Florida</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                42K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">PBS series featuring South Florida restaurant reviews from regular diners. Each episode features different locals sharing their favorite dining spots, providing authentic perspectives on regional restaurants.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>South Florida</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/CheckPleaseSouthFlorida" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Illinois Section -->
+        <section id="illinois" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Illinois</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Prairie State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Food Authority</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                287K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Comprehensive coverage of Chicago's diverse food scene from hot dogs to fine dining. Features in-depth restaurant reviews, chef interviews, and neighborhood food exploration throughout the Windy City.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoFoodAuthority" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Pizza Chronicles</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                95K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to reviewing Chicago's iconic pizza scene. Covers deep dish, tavern style, and artisanal pizzerias across the city, offering detailed comparisons and history of Chicago's pizza evolution.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoPizzaChronicles" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">The Food Guy</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                126K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Steve Dolinsky, aka "The Food Guy," covers Chicago's food scene with expert analysis. His professional experience as a food journalist brings depth to his restaurant reviews across Chicagoland.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheFoodGuyChicago" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Food Dude</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                56K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Covers neighborhood eateries throughout Chicago with a focus on authenticity. His reviews highlight lesser-known spots, ethnic restaurants, and affordable dining options across the city's diverse communities.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoFoodDude" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Eat Local Chicago</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                83K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Sean Ely and Cory Wagner explore Chicago's local restaurant scene beyond downtown. Their channel highlights neighborhood gems, family-owned establishments, and authentic Chicago experiences away from tourist areas.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/EatLocalChicago" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Food Tours</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                41K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on neighborhood-specific food tours throughout Chicago. Each video explores a different area of the city, highlighting local specialties and diverse cuisine in areas like Pilsen, Devon Avenue, and Chinatown.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoFoodTours" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Illinois Road Food</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                38K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores food beyond Chicago, covering rural Illinois restaurants and small town specialties. Features regional dishes, diners, and family-owned establishments across Central and Southern Illinois.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/IllinoisRoadFood" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="fast-food restaurant">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Food Planet</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                52K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Based on the popular food tour company, this channel features insider looks at Chicago's iconic food institutions. Covers the history and techniques behind Chicago specialties like Italian beef, hot dogs, and popcorn.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoFoodPlanet" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Windy City Cooks</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                37K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Combines restaurant reviews with recreations of iconic Chicago dishes. Features interviews with local chefs and tutorials on making Chicago classics like deep dish pizza and Italian beef at home.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/WindyCityCooks" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Chicago Food Reviews</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                35K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Straightforward video reviews of Chicago restaurants across all price points. Features concise coverage of new openings, classic establishments, and trending spots throughout the city.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Chicago, IL</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ChicagoFoodReviews" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pennsylvania Section -->
+        <section id="pennsylvania" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Pennsylvania</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Keystone State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">JL Jupiter</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                453K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores Philadelphia's diverse food scene with a focus on authenticity. Known for discovering hidden gems, reviewing iconic Philly food spots, and highlighting Black-owned businesses in the city.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Philadelphia, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/@JLJupiterTV" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Helga's Pennsylvania Cooking</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                87K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Features traditional Pennsylvania Dutch and Coal Region recipes and food reviews. Combines restaurant visits with home cooking tutorials highlighting Pennsylvania's unique culinary heritage.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Central PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/@PennsylvaniacookingBlogspot" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Philly Food Adventures</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                64K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to Philadelphia's rich food scene, covering everything from cheesesteaks to fine dining. Features in-depth exploration of Philly's diverse neighborhoods and their culinary specialties.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Philadelphia, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PhillyFoodAdventures" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Pittsburgh Foodie</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                42K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores Pittsburgh's evolving food scene as the city continues its culinary renaissance. Reviews range from traditional Pittsburgh specialties to innovative new restaurants across the Steel City.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Pittsburgh, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PittsburghFoodie" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">PA Food Trails</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                38K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Travel-oriented channel covering food across Pennsylvania's diverse regions. Features road trips to small towns, historical food establishments, and unique regional specialties throughout the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PAFoodTrails" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Amish Country Food Tours</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                51K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on Lancaster County's unique food culture and Amish cuisine. Features farmers markets, traditional restaurants, and authentic Pennsylvania Dutch specialties in America's oldest Amish settlement.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Lancaster, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/AmishCountryFoodTours" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Philly Cheesesteak Review</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                76K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focused exclusively on reviewing Philadelphia's iconic cheesesteak sandwiches. Visits renowned spots like Pat's and Geno's as well as neighborhood gems to determine the city's best cheesesteak.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Philadelphia, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PhillyCheesesteakReview" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Pennsylvania Junkie</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                32K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Combines food and travel content across Pennsylvania with an emphasis on local favorites. Features roadside stands, small town diners, and regional specialties that define Pennsylvania's diverse food culture.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/PennsylvaniaJunkie" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Coal Region Cuisine</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                28K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores the unique Eastern European-influenced foods of Pennsylvania's Coal Region. Reviews family-owned restaurants and traditional dishes like pierogies, halushki, and other distinctive regional specialties.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Coal Region, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/CoalRegionCuisine" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Reading Terminal Foodie</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                34K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focused on Philadelphia's historic Reading Terminal Market. Reviews the diverse food vendors within this iconic indoor market, highlighting its role in preserving and showcasing Pennsylvania's food heritage.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Philadelphia, PA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ReadingTerminalFoodie" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ohio Section -->
+        <section id="ohio" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Ohio</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Buckeye State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Cleveland Food Reviews</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                67K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores Cleveland's evolving food scene from traditional Polish and Eastern European cuisine to modern gastropubs. Features neighborhood-by-neighborhood exploration of the city's diverse culinary offerings.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Cleveland, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ClevelandFoodReviews" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Columbus Foodie Adventures</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                52K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to Columbus's rapidly growing food scene, from North Market to trendy Short North establishments. Focuses on both classic Columbus restaurants and innovative new dining concepts.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Columbus, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ColumbusFoodieAdventures" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Cincinnati Chili Quest</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                43K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focused on Cincinnati's unique chili culture, reviewing Skyline, Gold Star, and independent chili parlors. Explores the history and variations of this distinctive regional dish throughout the Cincinnati area.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Cincinnati, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/CincinnatiChiliQuest" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Ohio Food Travels</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                35K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Covers food across Ohio's diverse regions, from Amish country to urban centers. Features road trips to small towns, regional specialties, and unique dining experiences throughout the Buckeye State.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/OhioFoodTravels" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">The Food Review Guy</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                42K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Based in Northeast Ohio, reviewing restaurants across Cleveland, Akron, and surrounding areas. Known for honest, straightforward assessments of both chain restaurants and local establishments.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Northeast Ohio</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/TheFoodReviewGuy" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Toledo Food Scene</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                31K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to Toledo's underrated food culture, highlighting everything from classic diners to upscale restaurants. Features Tony Packo's and other iconic Toledo eateries alongside emerging culinary talent.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Toledo, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/ToledoFoodScene" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Amish Country Kitchen</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                48K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores Ohio's Amish country restaurants and traditional cuisine in Holmes County. Features family-style dining, bakeries, and authentic Amish cooking techniques from the world's largest Amish settlement.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Holmes County, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/AmishCountryKitchen" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 8 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Dayton Dining Guide</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                29K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focuses on Dayton's diverse food scene from historic restaurants to emerging foodie destinations. Covers the unique aviation-themed establishments, classic Dayton institutions, and new culinary ventures.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Dayton, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/DaytonDiningGuide" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 9 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Ohio River Foodways</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                33K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores the unique food culture along the Ohio River, from Cincinnati to small river towns. Features Appalachian influences, river town specialties, and the distinct food history of Ohio's southern border.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Southern Ohio</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/OhioRiverFoodways" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 10 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Ohio Hey Jack</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                38K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Videos featuring Ohio restaurant reviews with a focus on local establishments and regional favorites. Known for honest, authentic reactions to everything from diners to upscale restaurants throughout the state.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, OH</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/OhHeyJack" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Georgia Section -->
+        <section id="georgia" class="state-section mb-16">
+            <div class="flex items-center mb-6">
+                <h2 class="text-3xl font-bold text-gray-800">Georgia</h2>
+                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
+                    The Peach State
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Youtuber Card 1 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Atlanta Eats</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                168K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Professional review channel covering Atlanta's diverse food scene. Features high-quality videos of restaurants throughout the metro area, from traditional Southern cuisine to international fare.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Atlanta, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/user/ATLEATS" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 2 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Eating with Erica</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                56K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Atlanta-based food influencer exploring the city's rapidly evolving culinary landscape. Features stylish presentations of upscale restaurants, trendy spots, and hidden gems throughout the metropolitan area.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Atlanta, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/EatingWithErica" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 3 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Georgia Explorer</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                42K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Travels throughout Georgia reviewing restaurants beyond Atlanta. Features small town eateries, coastal seafood spots, and mountain restaurants, showcasing the state's regional diversity.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/GeorgiaExplorer" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 4 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant home-cooking">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Southern Cuisine Georgia</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                38K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Focused on authentic Southern cooking throughout Georgia. Reviews traditional meat-and-three restaurants, BBQ joints, and soul food establishments while exploring the state's rich culinary heritage.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Various, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SouthernCuisineGeorgia" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 5 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Savannah Food Guide</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                45K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Specialized in Savannah's unique food scene with its Lowcountry influences and historic establishments. Reviews range from traditional Southern eateries to innovative restaurants throughout the coastal city.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Savannah, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/SavannahFoodGuide" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 6 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="street fast-food">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Atlanta Food Trucks</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                37K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Dedicated to Atlanta's vibrant food truck scene. Features reviews of mobile eateries throughout the city, from taco trucks to gourmet food truck parks and festivals across the metropolitan area.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Atlanta, GA</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/AtlantaFoodTrucks" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+
+                <!-- Youtuber Card 7 -->
+                <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-xl font-semibold text-gray-800">Georgia Coast Cuisine</h3>
+                            <div class="text-sm font-medium px-2 py-1 bg-red-100 rounded-full text-red-800">
+                                33K Subscribers
+                            </div>
+                        </div>
+                        <p class="mt-3 text-gray-600">Explores seafood and coastal cuisine along Georgia's Atlantic shoreline. Features reviews of restaurants from Tybee Island to Cumberland Island, highlighting fresh seafood and Lowcountry specialties.</p>
+                        <div class="mt-4 flex items-center text-sm text-gray-
