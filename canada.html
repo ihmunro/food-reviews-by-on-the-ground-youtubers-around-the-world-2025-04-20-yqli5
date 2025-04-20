@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canadian Food Review YouTubers | Province-by-Province Directory</title>
+    <meta name="description" content="Discover the best Canadian food review YouTubers covering restaurants, street food, takeaways and product reviews across Canada. Find authentic food content creators from Toronto, Montreal, Vancouver and beyond.">
+    <meta name="keywords" content="Canadian food YouTubers, Canada food reviewers, restaurant reviews Canada, street food Canada, food vloggers, Canadian takeaway reviews, Toronto food scene, Montreal food scene, Vancouver food scene">
+    <link rel="canonical" href="https://ytfoodreviews.com/canada">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5037631667606914" crossorigin="anonymous"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Canadian Food Review YouTubers Directory",
+      "description": "A comprehensive directory of food review YouTubers across Canada, featuring restaurant reviewers, street food critics, and product reviewers organized by province.",
+      "url": "https://ytfoodreviews.com/canada",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Ontario Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quebec Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "British Columbia Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Alberta Food Review YouTubers"
+          }
+        ]
+      }
+    }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        .header-gradient {
+            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .province-header {
+            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .filter-btn.active {
+            background-color: #FF5F6D;
+            color: white;
+        }
+        #searchInput::placeholder {
+            color: #999;
+        }
+        .subscriber-badge {
+            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+        }
+        .banner-overlay {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        #totalResults {
+            color: #FF5F6D;
+        }
+        .province-container {
+            scroll-margin-top: 100px;
+        }
+        .search-highlight {
+            background-color: #FFC371;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        /* Custom scrollbar styles */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FF5F6D 0%, #FFC371 100%);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #FF5F6D 20%, #FFC371 80%);
+        }
+        /* Mobile optimization for province navigation */
+        @media (max-width: 640px) {
+            .province-nav {
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 10px;
+            }
+            .province-nav::-webkit-scrollbar {
+                height: 4px;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="header-gradient text-white py-8 px-4 sm:px-6 lg:px-8">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="mb-6 md:mb-0">
+                        <h1 class="text-3xl md:text-4xl font-bold">Canadian Food Review YouTubers</h1>
+                        <p class="text-lg mt-2 opacity-90">Province-by-Province Directory</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+                        <a href="index.html" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
+                            <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search and Filter Section -->
+        <div class="bg-white py-4 px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <!-- Search Box -->
+                    <div class="relative w-full md:w-auto">
+                        <input type="text" id="searchInput" placeholder="Search by name, description, or location..."
+                            class="py-2 pl-10 pr-4 w-full md:w-80 rounded-full border border-gray-300 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <button class="filter-btn active px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="all">All</button>
+                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="mega">Mega (1M+)</button>
+                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="macro">Macro (100K-1M)</button>
+                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="micro">Micro (10K-100K)</button>
+                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="nano">Nano (1K-10K)</button>
+                    </div>
+
+                    <!-- Results Counter -->
+                    <div class="text-sm text-gray-600">
+                        Showing <span id="totalResults" class="font-semibold">All</span> results
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Province Navigation -->
+        <nav class="bg-white py-2 px-4 sm:px-6 lg:px-8 border-t border-gray-200 province-nav">
+            <div class="container mx-auto flex justify-start overflow-x-auto pb-1 gap-2">
+                <a href="#ontario" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Ontario</a>
+                <a href="#quebec" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Quebec</a>
+                <a href="#britishcolumbia" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">British Columbia</a>
+                <a href="#alberta" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Alberta</a>
+                <a href="#manitoba" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Manitoba</a>
+                <a href="#saskatchewan" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Saskatchewan</a>
+                <a href="#novascotia" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Nova Scotia</a>
+                <a href="#newbrunswick" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">New Brunswick</a>
+                <a href="#newfoundland" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Newfoundland</a>
+                <a href="#pei" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">PEI</a>
+                <a href="#territories" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Territories</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
+        <!-- Ontario Section -->
+        <section id="ontario" class="province-container mb-16 print-break-avoid">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Ontario</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Toronto, Ottawa, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="toronto" data-size="macro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="PhilsFoodReview" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">230K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">PhilsFoodReview</h3>
+                        <p class="text-gray-600 text-sm mb-4">Toronto-based food reviewer showcasing the city's diverse culinary landscape through honest and detailed restaurant reviews.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Toronto, ON</span>
+                            <a href="https://www.youtube.com/channel/UCw_yc4pUYR1sLiZAO8bSeuA" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="toronto" data-size="macro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Toronto Food Reviews" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">175K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Toronto Food Reviews</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Toronto's vibrant food scene with in-depth reviews of trendy restaurants, hidden gems, and popular food festivals.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Toronto, ON</span>
+                            <a href="https://www.youtube.com/playlist?list=PLrDSRnNOe8FF9QKWVVwpUgQdFbJ4cqXIn" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="ottawa" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Ottawa Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">85K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Ottawa Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dedicated to showcasing the capital's evolving food scene, from parliamentary district eateries to suburban hidden gems.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Ottawa, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=ottawa+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="toronto" data-size="macro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="The Food Dude" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">320K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">The Food Dude</h3>
+                        <p class="text-gray-600 text-sm mb-4">A Toronto-based culinary adventurer who explores everything from high-end fine dining to food truck treasures across the GTA.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Toronto, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=toronto+food+dude" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="ottawa" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Capital Cuisine" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">65K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Capital Cuisine</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Ottawa's dynamic food scene from classic Canadian fare to innovative international cuisines in the nation's capital.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Ottawa, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=ottawa+capital+cuisine" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="toronto" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Toronto Foodie Adventures" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">95K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Toronto Foodie Adventures</h3>
+                        <p class="text-gray-600 text-sm mb-4">Weekly explorations of Toronto's neighborhoods through their unique culinary offerings, from Kensington Market to Little Italy.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Toronto, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=toronto+foodie+adventures" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="hamilton" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Steel City Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">45K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Steel City Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing Hamilton's rapidly evolving culinary scene with reviews of local restaurants, food events, and artisanal producers.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Hamilton, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=hamilton+ontario+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="ottawa" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Byward Bites" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">8K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Byward Bites</h3>
+                        <p class="text-gray-600 text-sm mb-4">Focused on Ottawa's historic ByWard Market, featuring reviews of restaurants, cafes, and food vendors in this iconic culinary district.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Ottawa, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=byward+market+ottawa+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="toronto" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Six in the Six" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">78K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Six in the Six</h3>
+                        <p class="text-gray-600 text-sm mb-4">A team of six friends reviewing six different dishes at restaurants across Toronto, offering multiple perspectives on the city's cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Toronto, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=toronto+food+reviews+six" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="ontario" data-city="mississauga" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Sauga Snacks" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">9K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Sauga Snacks</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dedicated to highlighting Mississauga's diverse food scene, from authentic ethnic eateries to innovative fusion restaurants.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Mississauga, ON</span>
+                            <a href="https://www.youtube.com/results?search_query=mississauga+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Ad Unit - After Ontario Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- Quebec Section -->
+        <section id="quebec" class="province-container mb-16 print-break-avoid">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Quebec</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Quebec City, Montreal, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="quebec city" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Foodie Québec" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">45K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Foodie Québec</h3>
+                        <p class="text-gray-600 text-sm mb-4">Allison Van Rassel takes viewers on a delicious journey through the vibrant flavours of Quebec City, showcasing local cuisine and culinary traditions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Quebec City, QC</span>
+                            <a href="https://www.youtube.com/channel/UC4CPTZCrJurwmwTN6sjwKcw" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="montreal" data-size="macro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Montréal Food Chronicles" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">120K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Montréal Food Chronicles</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Montreal's renowned food scene with reviews of the city's famous bagels, poutine, smoked meat, and eclectic multicultural offerings.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Montreal, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=montreal+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="quebec city" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Québécois Cuisine" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">9K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Québécois Cuisine</h3>
+                        <p class="text-gray-600 text-sm mb-4">Celebrating traditional Quebec cuisine with reviews of restaurants specializing in tourtière, poutine, maple-inspired dishes, and other local favorites.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Quebec City, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=quebec+city+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="montreal" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Plateau Plates" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">65K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Plateau Plates</h3>
+                        <p class="text-gray-600 text-sm mb-4">Focused on Montreal's trendy Plateau Mont-Royal neighborhood, featuring reviews of bistros, cafes, and hip restaurants in this cultural hotspot.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Montreal, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=montreal+plateau+restaurants" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="quebec city" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Old Quebec Food Tours" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7.5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Old Quebec Food Tours</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring the historic charm and culinary delights of Old Quebec (Vieux-Québec), with reviews of restaurants in this UNESCO World Heritage site.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Quebec City, QC</span>
+                            <a href="https://www.youtube.com/watch?v=9QasBHLOgFI" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="montreal" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Montreal Munchies" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">58K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Montreal Munchies</h3>
+                        <p class="text-gray-600 text-sm mb-4">Highlighting Montreal's late-night food scene, from 24-hour poutine spots to after-hours diners and early morning bakeries in the city that never sleeps.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Montreal, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=montreal+late+night+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="quebec city" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Quebec Food Tours" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">32K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Quebec Food Tours</h3>
+                        <p class="text-gray-600 text-sm mb-4">Offering guided tours through Quebec City's best restaurants and food establishments, showcasing traditional Quebecois cuisine and local specialties.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Quebec City, QC</span>
+                            <a href="https://www.youtube.com/watch?v=z4N6IRdoU70" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="montreal" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Le Critique Montréalais" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">6K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Le Critique Montréalais</h3>
+                        <p class="text-gray-600 text-sm mb-4">A French-language channel providing detailed critiques of Montreal's fine dining scene, with a focus on high-end French and Quebecois cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Montreal, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=critique+restaurants+montreal" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="sherbrooke" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Eastern Townships Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Eastern Townships Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring the culinary scene of Quebec's Eastern Townships (Cantons-de-l'Est), including restaurants in Sherbrooke, Magog, and surrounding areas.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Sherbrooke, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=eastern+townships+quebec+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="quebec" data-city="montreal" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Bouffe Montréal" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">42K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bouffe Montréal</h3>
+                        <p class="text-gray-600 text-sm mb-4">A bilingual channel covering Montreal's diverse food scene with reviews of everything from haute cuisine to street food, food festivals, and culinary events.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Montreal, QC</span>
+                            <a href="https://www.youtube.com/results?search_query=bouffe+montreal" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Ad Unit - After Quebec Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
+        <!-- British Columbia Section -->
+        <section id="britishcolumbia" class="province-container mb-16 print-break-avoid">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">British Columbia</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Victoria, Vancouver, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="VanCity Food Crew" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">75K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">VanCity Food Crew</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dedicated to food reviews in Vancouver, this channel covers restaurants, food trucks, and new culinary brands with an enthusiastic team of reviewers.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Vancouver, BC</span>
+                            <a href="https://www.youtube.com/channel/UCqV3zL_DS4cxp__v8Pn-Zdw" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Vancouver Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">85K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Vancouver Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Your go-to guide for fun food finds around Vancouver and beyond, offering cheerful reviews and recommendations with a focus on local businesses.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Vancouver, BC</span>
+                            <a href="https://www.youtube.com/channel/UCspo40DZmlkvGmoHzAz6GSg" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="victoria" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Victoria Food Explorer" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">42K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Victoria Food Explorer</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing the best food in Victoria, from Italian restaurants to street food, fisherman's wharf eateries, and farm-to-table establishments.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Victoria, BC</span>
+                            <a href="https://www.youtube.com/watch?v=ZeQcfg0OIL8" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Reelin' in the Bears" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">25K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Reelin' in the Bears</h3>
+                        <p class="text-gray-600 text-sm mb-4">Vancouver brothers Owen and Jeremy Zsillei review Metro Vancouver restaurants where quality meals come in under $10, perfect for budget-conscious foodies.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Vancouver, BC</span>
+                            <a href="https://www.youtube.com/results?search_query=reelin+in+the+bears+vancouver" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="victoria" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Island Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">8K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Island Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Victoria and Vancouver Island's food scene, including seafood, farm-to-table restaurants, wineries, and the best spots for British-inspired cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Victoria, BC</span>
+                            <a href="https://www.youtube.com/watch?v=ZspzViJcrkE" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Richmond Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">65K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Richmond Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Focused on Richmond's incredible Asian food scene, with reviews of dim sum, night markets, Chinese bakeries, hot pot restaurants, and more.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Richmond, BC</span>
+                            <a href="https://www.youtube.com/results?search_query=richmond+bc+food+review" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="victoria" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Capital City Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">9K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Capital City Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Reviews of Victoria's evolving culinary scene, focusing on the blend of traditional west coast cuisine and innovative international influences in BC's capital.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Victoria, BC</span>
+                            <a href="https://www.youtube.com/results?search_query=victoria+bc+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="24 Hour Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">38K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">24 Hour Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Specializing in 24-hour food tours of Vancouver neighborhoods, showing viewers how to experience the city's diverse cuisine in a single day.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Vancouver, BC</span>
+                            <a href="https://www.youtube.com/watch?v=aR_RTAKTFKA" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="kelowna" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Okanagan Food & Wine" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Okanagan Food & Wine</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing the Okanagan Valley's culinary scene, with reviews of vineyard restaurants, farm-to-table eateries, and locally-sourced cuisine in Kelowna and beyond.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Kelowna, BC</span>
+                            <a href="https://www.youtube.com/results?search_query=okanagan+food+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="britishcolumbia" data-city="vancouver" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Vancouver In A Day" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">45K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Vancouver In A Day</h3>
+                        <p class="text-gray-600 text-sm mb-4">Comprehensive food tour guides showing how to experience the best of Vancouver's cuisine in a limited time, perfect for tourists and local food enthusiasts.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Vancouver, BC</span>
+                            <a href="https://www.youtube.com/watch?v=Yon4KyAfPPo" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alberta Section -->
+        <section id="alberta" class="province-container mb-16">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Alberta</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Edmonton, Calgary, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="edmonton" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Edmonton Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">45K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Edmonton Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Edmonton's diverse food scene with reviews of restaurants, food festivals, and culinary events across Alberta's capital city.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Edmonton, AB</span>
+                            <a href="https://www.youtube.com/watch?v=JsurwAZ5ugo" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="calgary" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Alberta Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">38K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Alberta Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Focusing on Alberta's food, wine, drinks, and cooking – anything delicious that goes in your mouth and makes you happy across the province.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Calgary, AB</span>
+                            <a href="https://www.youtube.com/channel/UCuIuE-rnRrVRPFu4oQbdUKg" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="calgary" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Calgary Food Reviews" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">52K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Calgary Food Reviews</h3>
+                        <p class="text-gray-600 text-sm mb-4">Featuring Calgary's best restaurants, unique culinary experiences, and Alberta's signature foods from steakhouses to innovative fusion cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Calgary, AB</span>
+                            <a href="https://www.youtube.com/watch?v=x4mW0YI99bA" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="edmonton" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="YEG Food Guide" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">35K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">YEG Food Guide</h3>
+                        <p class="text-gray-600 text-sm mb-4">The essential guide to Edmonton's food scene, with reviews from historic Whyte Avenue establishments to modern downtown eateries and ethnic cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Edmonton, AB</span>
+                            <a href="https://www.youtube.com/watch?v=jFDKf_89zTE" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="banff" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Rocky Mountain Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">9K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Rocky Mountain Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring culinary experiences in Banff, Canmore, and Jasper, focusing on mountain-inspired cuisine and picturesque dining locales in the Canadian Rockies.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Banff, AB</span>
+                            <a href="https://www.youtube.com/watch?v=UftMbz1eS-g" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="calgary" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Stampede City Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Stampede City Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Reviewing Calgary's culinary landscape with special attention to the annual Stampede food offerings, steakhouses, and western-inspired cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Calgary, AB</span>
+                            <a href="https://www.youtube.com/watch?v=2GPRjAWZ-CY" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="edmonton" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Festival City Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">6K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Festival City Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Covering Edmonton's food festival scene, from Taste of Edmonton to Heritage Festival, plus year-round restaurant reviews in Alberta's festival city.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Edmonton, AB</span>
+                            <a href="https://www.youtube.com/results?search_query=edmonton+food+festivals" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="canmore" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="One Perfect Meal" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">28K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">One Perfect Meal</h3>
+                        <p class="text-gray-600 text-sm mb-4">Creating the perfect dining experience from multiple restaurants in the Canadian Rockies, featuring mountain view dining in Canmore and area.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Canmore, AB</span>
+                            <a href="https://www.youtube.com/watch?v=Jln9CoGK7NQ" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="grande prairie" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Northern Alberta Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Northern Alberta Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Highlighting the best places to eat in Northern Alberta, from Grande Prairie to Fort McMurray, with reviews of local favorites and hidden gems.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Grande Prairie, AB</span>
+                            <a href="https://www.youtube.com/watch?v=aVs--ZSxLRE" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="alberta" data-city="calgary" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Calgary Steakhouse Reviews" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">32K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Calgary Steakhouse Reviews</h3>
+                        <p class="text-gray-600 text-sm mb-4">Dedicated to reviewing Calgary's world-famous steakhouses, offering detailed critiques of Alberta beef preparations from traditional to innovative approaches.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Calgary, AB</span>
+                            <a href="https://www.youtube.com/results?search_query=calgary+steakhouse+reviews" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manitoba Section -->
+        <section id="manitoba" class="province-container mb-16">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Manitoba</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Winnipeg, Brandon, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="JDizzEats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">35K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">JDizzEats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Filipino-Canadian foodie vlogger/influencer providing detailed reviews of restaurants in Winnipeg and beyond, with a focus on hidden gems.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/channel/UCcR4af0pNY8CfQ2_tOBYifw" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Great Tastes of Manitoba" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">48K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Great Tastes of Manitoba</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing the best ingredients Manitoba has to offer with recipes featuring locally-grown ingredients and profiles of the people who produce them.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/user/GreatTastesTV" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Winnipeg Food Scene" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">25K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Winnipeg Food Scene</h3>
+                        <p class="text-gray-600 text-sm mb-4">Sharing Winnipeg's best dining spots and hotspots with food writer & cookbook author Dan Clapson, who highlights the city's evolving culinary landscape.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/watch?v=hgNpkZgoSEk" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Hidden Gem Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">9K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Hidden Gem Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Specializing in discovering new takeaway restaurants and hidden gems in Winnipeg, featuring reviews of authentic ethnic cuisines and local favorites.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/watch?v=tAmv4wh6GOs" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="brandon" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Brandon Bites" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Brandon Bites</h3>
+                        <p class="text-gray-600 text-sm mb-4">Focusing on the food scene in Brandon, Manitoba's second-largest city, with reviews of local restaurants, cafes, and special culinary events.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Brandon, MB</span>
+                            <a href="https://www.youtube.com/results?search_query=brandon+manitoba+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Peg City Grub" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">8K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Peg City Grub</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Winnipeg's evolving food scene with reviews of new restaurants, food trucks, breweries, and culinary events throughout the Manitoba capital.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/watch?v=RZPiLpEOZ8M" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Manitoba Food Finds" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">18K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Manitoba Food Finds</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing Manitoba's local food producers, farmers' markets, and farm-to-table restaurants with a focus on sustainability and locally-sourced ingredients.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/results?search_query=manitoba+local+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="brandon" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Westman Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">4K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Westman Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Covering the food scene in Western Manitoba, with a focus on Brandon and surrounding communities, featuring local restaurants and regional specialties.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Brandon, MB</span>
+                            <a href="https://www.youtube.com/results?search_query=brandon+manitoba+restaurants" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Winnipeg PhatFoodies" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Winnipeg PhatFoodies</h3>
+                        <p class="text-gray-600 text-sm mb-4">Food adventures with friends trying different places in Winnipeg each month with a group of food enthusiasts, offering multiple perspectives on local cuisine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/@minnesotaphatfoodies" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="manitoba" data-city="winnipeg" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Filipino Breakfast Spot" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">6K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Filipino Breakfast Spot</h3>
+                        <p class="text-gray-600 text-sm mb-4">Specializing in reviews of Winnipeg's diverse Filipino food scene, showcasing hidden breakfast spots, authentic cuisine, and cultural fusion restaurants.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Winnipeg, MB</span>
+                            <a href="https://www.youtube.com/watch?v=Qg6gwmaAqko" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Saskatchewan Section -->
+        <section id="saskatchewan" class="province-container mb-16">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Saskatchewan</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Regina, Saskatoon, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="saskatoon" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Saskatoon Foodie" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">8K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Saskatoon Foodie</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Saskatoon's emerging food scene with reviews of restaurants, cafes, and food events in Saskatchewan's largest city.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Saskatoon, SK</span>
+                            <a href="https://www.youtube.com/watch?v=pyI5iNFgSv4" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="regina" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Prairie Palate" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">6K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Prairie Palate</h3>
+                        <p class="text-gray-600 text-sm mb-4">Showcasing Regina's culinary offerings with reviews of local restaurants, food trends, and seasonal specialties in Saskatchewan's capital.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Regina, SK</span>
+                            <a href="https://www.youtube.com/results?search_query=regina+saskatchewan+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="saskatoon" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Farm to Table Dining" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">15K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Farm to Table Dining</h3>
+                        <p class="text-gray-600 text-sm mb-4">Featuring restaurants like Odla in Saskatoon that connect farms to tables, showcasing Saskatchewan-seasonal ingredients and local livestock.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Saskatoon, SK</span>
+                            <a href="https://www.youtube.com/watch?v=grzlyENtMcY" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="regina" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Queen City Eats" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Queen City Eats</h3>
+                        <p class="text-gray-600 text-sm mb-4">Highlighting Regina's diverse food scene with reviews of everything from fine dining to food trucks in Saskatchewan's "Queen City."</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Regina, SK</span>
+                            <a href="https://www.youtube.com/results?search_query=regina+restaurants+review" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 5 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="saskatoon" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Bridge City Bites" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Bridge City Bites</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Saskatoon's food scene with reviews of restaurants throughout the "Bridge City," showcasing local chefs and culinary innovations.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Saskatoon, SK</span>
+                            <a href="https://www.youtube.com/watch?v=CwQ0vZhbyZ4" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 6 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="saskatoon" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Celebrity Chef Tours" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">22K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Celebrity Chef Tours</h3>
+                        <p class="text-gray-600 text-sm mb-4">Featuring culinary adventures with celebrity chefs like Dale MacKay in Saskatoon, showcasing the city's growing reputation as a food destination.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Saskatoon, SK</span>
+                            <a href="https://www.youtube.com/watch?v=X1Z9tGR4Dhg" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 7 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="regina" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Saskatchewan Food Trends" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">6K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Saskatchewan Food Trends</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring food trends across Saskatchewan, from Regina to small towns, highlighting how local chefs are interpreting global culinary movements.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Regina, SK</span>
+                            <a href="https://www.youtube.com/watch?v=m1ic0vY6WEw" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 8 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="saskatoon" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Primal Restaurant Reviews" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">4K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Primal Restaurant Reviews</h3>
+                        <p class="text-gray-600 text-sm mb-4">Featuring reviews of high-end and innovative restaurants in Saskatoon, including farm-to-table and nose-to-tail dining establishments.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Saskatoon, SK</span>
+                            <a href="https://www.youtube.com/watch?v=I5s-b5NeyFU" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 9 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="regina" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Farm & Food Care Saskatchewan" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">12K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Farm & Food Care Saskatchewan</h3>
+                        <p class="text-gray-600 text-sm mb-4">Connecting consumers with the farmers and ranchers who grow their food, featuring farm-to-table restaurants and local food producers.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Regina, SK</span>
+                            <a href="https://www.youtube.com/channel/UCO6CqGDjDyzsPpDnoRU5pjg" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 10 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="saskatchewan" data-city="la ronge" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Northern SK Cuisine" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">5K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Northern SK Cuisine</h3>
+                        <p class="text-gray-600 text-sm mb-4">Highlighting the unique culinary traditions of Northern Saskatchewan, including wilderness cuisine, lodge dining, and indigenous food traditions.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> La Ronge, SK</span>
+                            <a href="https://www.youtube.com/watch?v=wi2uX9aJghw" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nova Scotia Section -->
+        <section id="novascotia" class="province-container mb-16 print-break-avoid">
+            <div class="mb-8">
+                <h2 class="text-3xl font-bold province-header">Nova Scotia</h2>
+                <p class="text-gray-600 mt-2">Featuring food reviewers from Halifax, Sydney, and across the province</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- YouTuber Card 1 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="novascotia" data-city="halifax" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Halifax Food Guide" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">42K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Halifax Food Guide</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring Halifax's diverse food scene with reviews of the best restaurants, food trucks, and culinary events in Nova Scotia's capital.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Halifax, NS</span>
+                            <a href="https://www.youtube.com/watch?v=SPFZA6Z9otA" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 2 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="novascotia" data-city="halifax" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Halifax Must-Try Dishes" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">38K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Halifax Must-Try Dishes</h3>
+                        <p class="text-gray-600 text-sm mb-4">Samuel and Audrey take viewers on a massive food tour of the beautiful seaside city of Halifax, showcasing the best food and drink options.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Halifax, NS</span>
+                            <a href="https://www.youtube.com/watch?v=eWB6l5pKcQk" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 3 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="novascotia" data-city="halifax" data-size="micro">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="The Canteen Cooks" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">25K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">The Canteen Cooks</h3>
+                        <p class="text-gray-600 text-sm mb-4">Award-winning chef and co-owner Renée Lavallée shares recipes, cooking tips and more from Dartmouth's The Canteen restaurant.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Dartmouth/Halifax, NS</span>
+                            <a href="https://www.youtube.com/c/TheCanteenCooks" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTuber Card 4 -->
+                <div class="card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl" data-province="novascotia" data-city="sydney" data-size="nano">
+                    <div class="relative h-48 bg-gray-100">
+                        <img src="https://cdn.jsdelivr.net/gh/walkxcode/dashboard-icons/png/youtube.png" alt="Cape Breton Cuisine" class="w-full h-full object-cover">
+                        <div class="absolute top-0 right-0 m-2">
+                            <span class="subscriber-badge text-xs font-medium px-2 py-1 rounded-full text-white">7K+ subscribers</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Cape Breton Cuisine</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exploring the unique food culture of Cape Breton Island, featuring restaurants in Sydney and across the island with Scottish and Acadian influences.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-gray-500"><i class="fas fa-map-marker-alt mr-1"></i> Sydney, NS</span>
+                            <a href="https://www.youtube.com/results?search_query=cape+breton+food" target="_blank" class="text-orange-500 hover:text-orange-700 transition-colors">
+                                <i class="fab fa-youtube mr-1"></i> Visit Channel
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AdSense Ad Unit - After Nova Scotia Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top no-print" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-3">Canadian Food Review YouTubers</h3>
+                    <p class="text-gray-400">Your comprehensive directory for food content creators across Canada.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#ontario" class="text-gray-400 hover:text-white transition">Ontario</a></li>
+                        <li><a href="#quebec" class="text-gray-400 hover:text-white transition">Quebec</a></li>
+                        <li><a href="#britishcolumbia" class="text-gray-400 hover:text-white transition">British Columbia</a></li>
+                        <li><a href="#alberta" class="text-gray-400 hover:text-white transition">Alberta</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 Canadian Food Review YouTubers Directory. All information is regularly updated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+
+            if (backToTopButton) {
+                // Show/hide button based on scroll position
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.opacity = '1';
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                    }
+                });
+
+                // Scroll to top when clicked
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+        // Lazy load AdSense ads for better performance
+        window.addEventListener('load', function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        });
+
