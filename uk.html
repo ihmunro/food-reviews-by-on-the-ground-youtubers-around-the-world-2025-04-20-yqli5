@@ -5,12 +5,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UK Food Review YouTubers | The Ultimate Directory</title>
+    <title>UK Food Review YouTubers | The Ultimate Directory of British Food Content Creators</title>
+    <meta name="description" content="Discover the best UK food review YouTubers covering restaurants, street food, takeaways and product reviews across Britain. Find authentic food content creators from London, Manchester, Birmingham and beyond.">
+    <meta name="keywords" content="UK food YouTubers, British food reviewers, restaurant reviews UK, street food UK, food vloggers, UK takeaway reviews, London food scene, British food content creators">
+    <link rel="canonical" href="https://ytfoodreviews.com/uk">
+    <meta name="robots" content="index, follow">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5037631667606914" crossorigin="anonymous"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "UK Food Review YouTubers Directory",
+      "description": "A comprehensive directory of food review YouTubers across the United Kingdom, featuring restaurant reviewers, street food critics, and product reviewers.",
+      "url": "https://ytfoodreviews.com/uk",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Restaurant Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Street Food & Takeaway Reviewers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Product Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "General Food YouTubers & Vloggers"
+          }
+        ]
+      }
+    }
+    </script>
     <style>
         :root {
             --primary-color: #e63946;
@@ -19,77 +62,77 @@
             --text-color: #1d3557;
             --light-text: #457b9d;
         }
-        
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text-color);
             background-color: #f9f9f9;
         }
-        
+
         h1, h2, h3, h4, h5 {
             font-family: 'Montserrat', sans-serif;
         }
-        
+
         .header-bg {
             background-color: var(--primary-color);
             background-image: linear-gradient(135deg, var(--primary-color) 0%, #ff8a65 100%);
         }
-        
+
         .category-title {
             border-bottom: 3px solid var(--primary-color);
             display: inline-block;
         }
-        
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .btn-primary {
             background-color: var(--primary-color);
             color: white;
         }
-        
+
         .btn-primary:hover {
             background-color: #d32f2f;
         }
-        
+
         .category-badge {
             background-color: var(--accent-color);
             color: var(--text-color);
         }
-        
+
         .subscriber-count {
             color: var(--light-text);
         }
-        
+
         .search-box {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             background-color: white;
         }
-        
+
         .filter-active {
             background-color: var(--primary-color);
             color: white;
         }
-        
+
         #youtuber-list {
             min-height: 500px;
         }
-        
+
         .scrollbar-hide::-webkit-scrollbar {
             display: none;
         }
-        
+
         .scrollbar-hide {
             -ms-overflow-style: none;
             scrollbar-width: none;
         }
-        
+
         .back-to-top {
             position: fixed;
             bottom: 20px;
@@ -107,12 +150,12 @@
             opacity: 0;
             z-index: 999;
         }
-        
-         {
+
+        @media print {
             .no-print {
                 display: none;
             }
-            
+
             .print-break-avoid {
                 break-inside: avoid;
             }
@@ -128,10 +171,15 @@
                     <h1 class="text-3xl md:text-4xl font-bold">UK Food Review YouTubers</h1>
                     <p class="text-lg mt-2 opacity-90">The Ultimate Directory of British Food Content Creators</p>
                 </div>
-                <div class="flex space-x-4">
-                    <a href="#restaurant-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Restaurant</a>
-                    <a href="#street-food-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Street Food</a>
-                    <a href="#product-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Product</a>
+                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+                    <a href="https://ytfoodreviews.com" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                    </a>
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a href="#restaurant-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Restaurant</a>
+                        <a href="#street-food-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Street Food</a>
+                        <a href="#product-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Product</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,6 +227,8 @@
         </div>
     </section>
 
+
+
     <!-- Main Content -->
     <main class="container mx-auto px-4 md:px-6 lg:px-8 py-8">
         <!-- Restaurant Review YouTubers -->
@@ -189,6 +239,20 @@
             </div>
         </section>
 
+        <!-- AdSense Ad Unit - After Restaurant Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <!-- Street Food & Takeaway Review YouTubers -->
         <section id="street-food-reviews" class="mb-12 print-break-avoid">
             <h2 class="text-2xl font-bold mb-6 category-title">Street Food & Takeaway Reviewers</h2>
@@ -196,6 +260,20 @@
                 <!-- Street food reviewers will be populated here by JavaScript -->
             </div>
         </section>
+
+        <!-- AdSense Ad Unit - After Street Food Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
 
         <!-- Product Review YouTubers -->
         <section id="product-reviews" class="mb-12 print-break-avoid">
@@ -205,6 +283,20 @@
             </div>
         </section>
 
+        <!-- AdSense Ad Unit - After Product Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <!-- General Food YouTubers -->
         <section id="general-food" class="mb-12 print-break-avoid">
             <h2 class="text-2xl font-bold mb-6 category-title">General Food YouTubers & Vloggers</h2>
@@ -212,6 +304,20 @@
                 <!-- General food YouTubers will be populated here by JavaScript -->
             </div>
         </section>
+
+        <!-- AdSense Ad Unit - Before Footer -->
+        <div class="container mx-auto px-4 py-6 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
     </main>
 
     <!-- Back to Top Button -->
@@ -669,11 +775,11 @@
 
             // Filter and display cards
             let visibleCount = 0;
-            
+
             sortedYoutubers.forEach(youtuber => {
                 const card = createYoutuberCard(youtuber);
                 let isVisible = true;
-                
+
                 // Apply filters
                 if (filterCategory !== 'all') {
                     if (filterCategory === 'mega' || filterCategory === 'macro') {
@@ -682,17 +788,17 @@
                         isVisible = youtuber.tags.includes(filterCategory) || youtuber.category === filterCategory;
                     }
                 }
-                
+
                 // Apply search
                 const searchTerm = searchInput.value.toLowerCase();
                 if (searchTerm !== '') {
                     const nameMatch = youtuber.name.toLowerCase().includes(searchTerm);
                     const descMatch = youtuber.description.toLowerCase().includes(searchTerm);
                     const tagMatch = youtuber.tags.some(tag => tag.toLowerCase().includes(searchTerm));
-                    
+
                     isVisible = isVisible && (nameMatch || descMatch || tagMatch);
                 }
-                
+
                 // Show/hide based on filters
                 if (isVisible) {
                     if (youtuber.category === 'restaurant') {
@@ -707,13 +813,13 @@
                     visibleCount++;
                 }
             });
-            
+
             // Hide empty sections
             toggleSectionVisibility(restaurantList, 'restaurant-reviews');
             toggleSectionVisibility(streetFoodList, 'street-food-reviews');
             toggleSectionVisibility(productList, 'product-reviews');
             toggleSectionVisibility(generalList, 'general-food');
-            
+
             // Update results count text
             updateResultsCount(visibleCount);
         }
@@ -743,7 +849,7 @@
             searchInput.addEventListener('input', () => {
                 sortAndDisplayYoutubers(getActiveFilter());
             });
-            
+
             // Filter buttons
             filterButtons.forEach(button => {
                 button.addEventListener('click', () => {
@@ -755,12 +861,12 @@
                     sortAndDisplayYoutubers(button.dataset.filter);
                 });
             });
-            
+
             // Sort select
             sortSelect.addEventListener('change', () => {
                 sortAndDisplayYoutubers(getActiveFilter());
             });
-            
+
             // Back to top button
             window.addEventListener('scroll', () => {
                 if (window.pageYOffset > 300) {
@@ -769,7 +875,7 @@
                     backToTopButton.style.opacity = '0';
                 }
             });
-            
+
             backToTopButton.addEventListener('click', () => {
                 window.scrollTo({
                     top: 0,
@@ -786,13 +892,17 @@
 
         // Initialize on page load
         document.addEventListener('DOMContentLoaded', init);
-        
+
         // Set the first filter button as active initially
         document.addEventListener('DOMContentLoaded', () => {
             filterButtons[0].classList.add('filter-active');
         });
+
+        // Lazy load AdSense ads for better performance
+        window.addEventListener('load', function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        });
     </script>
 </body>
 </html>
-   
-    
+
