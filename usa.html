@@ -7,134 +7,233 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Discover the best USA food review YouTubers covering restaurants, street food, takeaways and product reviews across America. Find authentic food content creators from California, New York, Texas and beyond.">
+    <meta name="keywords" content="USA food YouTubers, American food reviewers, restaurant reviews USA, street food America, food vloggers, US takeaway reviews, California food scene, New York food scene, Texas food scene">
+    <link rel="canonical" href="https://ytfoodreviews.com/usa">
+    <meta name="robots" content="index, follow">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5037631667606914" crossorigin="anonymous"></script>
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "USA Food Review YouTubers Directory",
+      "description": "A comprehensive directory of food review YouTubers across the United States, featuring restaurant reviewers, street food critics, and product reviewers organized by state.",
+      "url": "https://ytfoodreviews.com/usa",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "California Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "New York Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Texas Food Review YouTubers"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Florida Food Review YouTubers"
+          }
+        ]
+      }
+    }
+    </script>
+
     <style>
         :root {
-            --primary-color: #e53e3e;
-            --secondary-color: #f87171;
-            --text-color: #374151;
-            --bg-color: #f9fafb;
-            --card-color: #ffffff;
-            --highlight-color: #fecaca;
+            --primary-color: #e63946;
+            --secondary-color: #f1faee;
+            --accent-color: #a8dadc;
+            --text-color: #1d3557;
+            --light-text: #457b9d;
         }
-        
+
         body {
-            font-family: 'Montserrat', sans-serif;
+            font-family: 'Poppins', sans-serif;
             color: var(--text-color);
-            background-color: var(--bg-color);
+            background-color: #f9f9f9;
         }
-        
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
         }
-        
+
+        .header-bg {
+            background-color: var(--primary-color);
+            background-image: linear-gradient(135deg, var(--primary-color) 0%, #ff8a65 100%);
+        }
+
+        .category-title {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            color: var(--text-color);
+        }
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
-        .state-section {
-            scroll-margin-top: 120px;
-        }
-        
-        #back-to-top {
-            display: none;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 99;
-            cursor: pointer;
+
+        .btn-primary {
             background-color: var(--primary-color);
+            color: white;
         }
-        
-        .state-nav-item.active {
-            border-bottom: 3px solid var(--primary-color);
-            font-weight: 600;
+
+        .btn-primary:hover {
+            background-color: #d32f2f;
         }
-        
+
+        .category-badge {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .subscriber-badge {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
+        .search-box {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background-color: white;
+        }
+
+        .filter-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .state-section {
+            scroll-margin-top: 100px;
+            min-height: 500px;
+        }
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0;
+            z-index: 999;
+        }
+
         @media print {
-            #back-to-top, 
-            #search-container,
-            #filter-container {
-                display: none !important;
+            .no-print {
+                display: none;
             }
-            
-            .state-section {
+
+            .print-break-avoid {
                 break-inside: avoid;
-                page-break-inside: avoid;
             }
         }
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="container mx-auto px-4 py-6">
+    <!-- Header Section -->
+    <header class="header-bg text-white">
+        <div class="container mx-auto py-8 px-4 md:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
-                    <h1 class="text-3xl md:text-4xl font-bold text-red-600">USA Food Review YouTubers</h1>
-                    <p class="text-gray-600 text-sm md:text-base">State-by-State Directory of America's Top Food Reviewers</p>
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">USA Food Review YouTubers</h1>
+                    <p class="text-lg mt-2 opacity-90">State-by-State Directory of America's Top Food Reviewers</p>
                 </div>
-
-                <!-- Search Bar -->
-                <div id="search-container" class="w-full md:w-1/3">
-                    <div class="relative">
-                        <input type="text" id="search-input" placeholder="Search YouTubers..." 
-                            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
-                        <button class="absolute right-3 top-2.5 text-gray-400">
-                            <i class="fas fa-search"></i>
-                        </button>
+                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+                    <a href="index.html" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                    </a>
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a href="#california" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">California</a>
+                        <a href="#new-york" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">New York</a>
+                        <a href="#texas" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Texas</a>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Filter and State Navigation -->
-        <div class="bg-gray-100 py-2 overflow-x-auto">
-            <div class="container mx-auto px-4">
-                <div id="filter-container" class="flex items-center mb-2 md:mb-0">
-                    <label class="mr-2 text-sm font-medium text-gray-700">Filter by:</label>
-                    <select id="subscriber-filter" class="text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-red-500">
-                        <option value="all">All Subscribers</option>
-                        <option value="mega">Mega (1M+)</option>
-                        <option value="macro">Macro (100K-1M)</option>
-                        <option value="micro">Micro (10K-100K)</option>
-                        <option value="nano">Nano (under 10K)</option>
-                    </select>
-                    <select id="content-filter" class="ml-2 text-sm border border-gray-300 rounded px-2 py-1 focus:outline-none focus:ring-1 focus:ring-red-500">
-                        <option value="all">All Content Types</option>
-                        <option value="restaurant">Restaurant Reviews</option>
-                        <option value="street">Street Food</option>
-                        <option value="fast-food">Fast Food</option>
-                        <option value="home-cooking">Home Cooking</option>
-                        <option value="travel">Food + Travel</option>
-                    </select>
-                </div>
+    </header>
 
-                <!-- State Navigation -->
-                <div id="state-nav" class="flex space-x-3 md:space-x-6 py-1 overflow-x-auto hide-scrollbar text-sm whitespace-nowrap">
-                    <a href="#california" class="state-nav-item px-1 py-1 hover:text-red-600">California</a>
-                    <a href="#new-york" class="state-nav-item px-1 py-1 hover:text-red-600">New York</a>
-                    <a href="#texas" class="state-nav-item px-1 py-1 hover:text-red-600">Texas</a>
-                    <a href="#florida" class="state-nav-item px-1 py-1 hover:text-red-600">Florida</a>
-                    <a href="#illinois" class="state-nav-item px-1 py-1 hover:text-red-600">Illinois</a>
-                    <a href="#pennsylvania" class="state-nav-item px-1 py-1 hover:text-red-600">Pennsylvania</a>
-                    <a href="#ohio" class="state-nav-item px-1 py-1 hover:text-red-600">Ohio</a>
-                    <a href="#georgia" class="state-nav-item px-1 py-1 hover:text-red-600">Georgia</a>
-                    <a href="#michigan" class="state-nav-item px-1 py-1 hover:text-red-600">Michigan</a>
-                    <a href="#washington" class="state-nav-item px-1 py-1 hover:text-red-600">Washington</a>
-                    <a href="#massachusetts" class="state-nav-item px-1 py-1 hover:text-red-600">Massachusetts</a>
-                    <a href="#colorado" class="state-nav-item px-1 py-1 hover:text-red-600">Colorado</a>
-                    <a href="#arizona" class="state-nav-item px-1 py-1 hover:text-red-600">Arizona</a>
-                    <a href="#tennessee" class="state-nav-item px-1 py-1 hover:text-red-600">Tennessee</a>
-                    <a href="#minnesota" class="state-nav-item px-1 py-1 hover:text-red-600">Minnesota</a>
+    <!-- Search & Filters Section -->
+    <section class="py-8 bg-white shadow-sm no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="search-box rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center mb-4">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by name, description or location..." class="w-full py-3 px-4 pl-12 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                            <span class="absolute left-3 top-3 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm font-medium mr-2 mt-1">Filter by:</span>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="all">All</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="mega">Mega (1M+)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="macro">Macro (100K-1M)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="micro">Micro (10K-100K)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="nano">Nano (1K-10K)</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mt-2">
+                    <p id="results-count" class="mr-4">Showing all YouTubers</p>
+                    <div class="flex items-center ml-auto">
+                        <label for="sort-select" class="mr-2">Sort by:</label>
+                        <select id="sort-select" class="bg-gray-100 rounded-md py-1 px-2 focus:outline-none">
+                            <option value="subscribers-desc">Subscribers (High to Low)</option>
+                            <option value="subscribers-asc">Subscribers (Low to High)</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
     <main class="container mx-auto px-4 py-8">
         <!-- No results message (hidden by default) -->
@@ -145,14 +244,10 @@
         </div>
 
         <!-- California Section -->
-        <section id="california" class="state-section mb-16">
-            <div class="flex items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">California</h2>
-                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
-                    The Golden State
-                </div>
-            </div>
-            
+        <section id="california" class="state-section mb-16 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">California</h2>
+            <p class="text-gray-600 mt-2 mb-6">The Golden State - Featuring food reviewers from Los Angeles, San Francisco, and across the state</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street travel">
@@ -336,15 +431,25 @@
             </div>
         </section>
 
+        <!-- AdSense Ad Unit - After California Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <!-- New York Section -->
-        <section id="new-york" class="state-section mb-16">
-            <div class="flex items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">New York</h2>
-                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
-                    The Empire State
-                </div>
-            </div>
-            
+        <section id="new-york" class="state-section mb-16 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">New York</h2>
+            <p class="text-gray-600 mt-2 mb-6">The Empire State - Featuring food reviewers from New York City, Buffalo, and across the state</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant fast-food">
@@ -528,15 +633,25 @@
             </div>
         </section>
 
+        <!-- AdSense Ad Unit - After New York Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <!-- Texas Section -->
-        <section id="texas" class="state-section mb-16">
-            <div class="flex items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">Texas</h2>
-                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
-                    The Lone Star State
-                </div>
-            </div>
-            
+        <section id="texas" class="state-section mb-16 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Texas</h2>
+            <p class="text-gray-600 mt-2 mb-6">The Lone Star State - Featuring food reviewers from Houston, Dallas, Austin, and across the state</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
@@ -720,15 +835,25 @@
             </div>
         </section>
 
+        <!-- AdSense Ad Unit - After Texas Section -->
+        <div class="container mx-auto px-4 py-4 text-center no-print">
+            <!-- FoodReviews -->
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-5037631667606914"
+                 data-ad-slot="3475675140"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+
         <!-- Florida Section -->
-        <section id="florida" class="state-section mb-16">
-            <div class="flex items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">Florida</h2>
-                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
-                    The Sunshine State
-                </div>
-            </div>
-            
+        <section id="florida" class="state-section mb-16 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Florida</h2>
+            <p class="text-gray-600 mt-2 mb-6">The Sunshine State - Featuring food reviewers from Miami, Orlando, Tampa, and across the state</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant travel">
@@ -913,14 +1038,10 @@
         </section>
 
         <!-- Illinois Section -->
-        <section id="illinois" class="state-section mb-16">
-            <div class="flex items-center mb-6">
-                <h2 class="text-3xl font-bold text-gray-800">Illinois</h2>
-                <div class="ml-4 px-3 py-1 bg-red-100 rounded-full text-red-800 text-sm font-medium">
-                    The Prairie State
-                </div>
-            </div>
-            
+        <section id="illinois" class="state-section mb-16 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Illinois</h2>
+            <p class="text-gray-600 mt-2 mb-6">The Prairie State - Featuring food reviewers from Chicago and across the state</p>
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
@@ -1112,7 +1233,7 @@
                     The Keystone State
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
@@ -1304,7 +1425,7 @@
                     The Buckeye State
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="micro" data-content="restaurant street">
@@ -1496,7 +1617,7 @@
                     The Peach State
                 </div>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Youtuber Card 1 -->
                 <div class="card bg-white rounded-xl shadow-md overflow-hidden" data-subscribers="macro" data-content="restaurant street">
@@ -1616,4 +1737,168 @@
                             </div>
                         </div>
                         <p class="mt-3 text-gray-600">Explores seafood and coastal cuisine along Georgia's Atlantic shoreline. Features reviews of restaurants from Tybee Island to Cumberland Island, highlighting fresh seafood and Lowcountry specialties.</p>
-                        <div class="mt-4 flex items-center text-sm text-gray-
+                        <div class="mt-4 flex items-center text-sm text-gray-500">
+                            <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+                            <span>Coastal Georgia</span>
+                        </div>
+                        <a href="https://www.youtube.com/c/GeorgiaCoastCuisine" target="_blank" class="mt-4 inline-block px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">Visit Channel</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- AdSense Ad Unit - Before Footer -->
+    <div class="container mx-auto px-4 py-4 text-center no-print">
+        <!-- FoodReviews -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5037631667606914"
+             data-ad-slot="3475675140"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top no-print" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-3">USA Food Review YouTubers</h3>
+                    <p class="text-gray-400">Your comprehensive directory for food content creators across the United States.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#california" class="text-gray-400 hover:text-white transition">California</a></li>
+                        <li><a href="#new-york" class="text-gray-400 hover:text-white transition">New York</a></li>
+                        <li><a href="#texas" class="text-gray-400 hover:text-white transition">Texas</a></li>
+                        <li><a href="#florida" class="text-gray-400 hover:text-white transition">Florida</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 USA Food Review YouTubers Directory. All information is regularly updated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Back to top button functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+
+            if (backToTopButton) {
+                // Show/hide button based on scroll position
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        backToTopButton.style.opacity = '1';
+                    } else {
+                        backToTopButton.style.opacity = '0';
+                    }
+                });
+
+                // Scroll to top when clicked
+                backToTopButton.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+
+        // Lazy load AdSense ads for better performance
+        window.addEventListener('load', function() {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        });
+
+        // Search functionality
+        document.getElementById('search-input').addEventListener('input', filterYoutubers);
+
+        // Filter buttons functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                filterYoutubers();
+            });
+        });
+
+        // Set the first filter button as active initially
+        document.addEventListener('DOMContentLoaded', () => {
+            filterButtons[0].classList.add('active');
+        });
+
+        function filterYoutubers() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const activeFilter = document.querySelector('.filter-btn.active');
+            const filterValue = activeFilter ? activeFilter.getAttribute('data-filter') : 'all';
+
+            const cards = document.querySelectorAll('.card');
+            let visibleCount = 0;
+
+            cards.forEach(card => {
+                const cardText = card.textContent.toLowerCase();
+                const subscriberSize = card.getAttribute('data-subscribers');
+
+                const matchesSearch = searchTerm === '' || cardText.includes(searchTerm);
+                const matchesFilter = filterValue === 'all' || filterValue === subscriberSize;
+
+                if (matchesSearch && matchesFilter) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Show/hide no results message
+            const noResults = document.getElementById('no-results');
+            if (visibleCount === 0) {
+                noResults.classList.remove('hidden');
+            } else {
+                noResults.classList.add('hidden');
+            }
+
+            // Update section visibility
+            updateSectionVisibility();
+
+            // Update results count
+            document.getElementById('results-count').textContent =
+                visibleCount === 0 ? 'No results found' :
+                `Showing ${visibleCount} ${visibleCount === 1 ? 'YouTuber' : 'YouTubers'}`;
+        }
+
+        function updateSectionVisibility() {
+            const sections = document.querySelectorAll('.state-section');
+
+            sections.forEach(section => {
+                const cards = section.querySelectorAll('.card');
+                let visibleCards = 0;
+
+                cards.forEach(card => {
+                    if (card.style.display !== 'none') {
+                        visibleCards++;
+                    }
+                });
+
+                if (visibleCards === 0) {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'block';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

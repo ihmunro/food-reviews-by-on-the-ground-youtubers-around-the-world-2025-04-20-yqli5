@@ -51,67 +51,120 @@
     }
     </script>
     <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #f1faee;
+            --accent-color: #a8dadc;
+            --text-color: #1d3557;
+            --light-text: #457b9d;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
-            color: #333;
-            background-color: #f8f9fa;
+            color: var(--text-color);
+            background-color: #f9f9f9;
         }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
         .header-gradient {
-            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+            background-color: var(--primary-color);
+            background-image: linear-gradient(135deg, var(--primary-color) 0%, #ff8a65 100%);
         }
+
+        .province-header {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+            color: var(--text-color);
+        }
+
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        .province-header {
-            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-        }
-        .filter-btn.active {
-            background-color: #FF5F6D;
+
+        .btn-primary {
+            background-color: var(--primary-color);
             color: white;
         }
-        #searchInput::placeholder {
-            color: #999;
+
+        .btn-primary:hover {
+            background-color: #d32f2f;
         }
+
+        .category-badge {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+
         .subscriber-badge {
-            background: linear-gradient(90deg, #FF5F6D 0%, #FFC371 100%);
+            background-color: var(--accent-color);
+            color: var(--text-color);
         }
-        .banner-overlay {
-            background: rgba(0, 0, 0, 0.5);
+
+        .search-box {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background-color: white;
         }
-        #totalResults {
-            color: #FF5F6D;
+
+        .filter-active {
+            background-color: var(--primary-color);
+            color: white;
         }
+
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
         .province-container {
             scroll-margin-top: 100px;
+            min-height: 500px;
         }
-        .search-highlight {
-            background-color: #FFC371;
-            padding: 0 2px;
-            border-radius: 2px;
+
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
         }
-        /* Custom scrollbar styles */
-        ::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0;
+            z-index: 999;
         }
-        ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #FF5F6D 0%, #FFC371 100%);
-            border-radius: 10px;
+
+        @media print {
+            .no-print {
+                display: none;
+            }
+
+            .print-break-avoid {
+                break-inside: avoid;
+            }
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(180deg, #FF5F6D 20%, #FFC371 80%);
-        }
+
         /* Mobile optimization for province navigation */
         @media (max-width: 640px) {
             .province-nav {
@@ -127,80 +180,74 @@
     </style>
 </head>
 <body class="min-h-screen">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 bg-white shadow-md">
-        <div class="header-gradient text-white py-8 px-4 sm:px-6 lg:px-8">
-            <div class="container mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="mb-6 md:mb-0">
-                        <h1 class="text-3xl md:text-4xl font-bold">Canadian Food Review YouTubers</h1>
-                        <p class="text-lg mt-2 opacity-90">Province-by-Province Directory</p>
-                    </div>
-                    <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
-                        <a href="index.html" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
-                            <i class="fas fa-arrow-left mr-2"></i> Back to Home
-                        </a>
+    <!-- Header Section -->
+    <header class="header-bg text-white">
+        <div class="container mx-auto py-8 px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Canadian Food Review YouTubers</h1>
+                    <p class="text-lg mt-2 opacity-90">Province-by-Province Directory</p>
+                </div>
+                <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
+                    <a href="index.html" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Home
+                    </a>
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a href="#ontario" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Ontario</a>
+                        <a href="#quebec" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Quebec</a>
+                        <a href="#britishcolumbia" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">BC</a>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
 
-        <!-- Search and Filter Section -->
-        <div class="bg-white py-4 px-4 sm:px-6 lg:px-8 shadow-sm">
-            <div class="container mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                    <!-- Search Box -->
-                    <div class="relative w-full md:w-auto">
-                        <input type="text" id="searchInput" placeholder="Search by name, description, or location..."
-                            class="py-2 pl-10 pr-4 w-full md:w-80 rounded-full border border-gray-300 focus:outline-none focus:border-orange-400 focus:ring-2 focus:ring-orange-200">
-                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                            <i class="fas fa-search text-gray-400"></i>
+    <!-- Search & Filters Section -->
+    <section class="py-8 bg-white shadow-sm no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="search-box rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center mb-4">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by name, description or location..." class="w-full py-3 px-4 pl-12 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                            <span class="absolute left-3 top-3 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </span>
                         </div>
                     </div>
-
-                    <!-- Filter Buttons -->
-                    <div class="flex flex-wrap justify-center gap-2">
-                        <button class="filter-btn active px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="all">All</button>
-                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="mega">Mega (1M+)</button>
-                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="macro">Macro (100K-1M)</button>
-                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="micro">Micro (10K-100K)</button>
-                        <button class="filter-btn px-3 py-1 text-sm rounded-full bg-gray-200 hover:bg-gray-300 transition-colors" data-filter="nano">Nano (1K-10K)</button>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm font-medium mr-2 mt-1">Filter by:</span>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="all">All</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="mega">Mega (1M+)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="macro">Macro (100K-1M)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="micro">Micro (10K-100K)</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="nano">Nano (1K-10K)</button>
+                        </div>
                     </div>
-
-                    <!-- Results Counter -->
-                    <div class="text-sm text-gray-600">
-                        Showing <span id="totalResults" class="font-semibold">All</span> results
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mt-2">
+                    <p id="results-count" class="mr-4">Showing all YouTubers</p>
+                    <div class="flex items-center ml-auto">
+                        <label for="sort-select" class="mr-2">Sort by:</label>
+                        <select id="sort-select" class="bg-gray-100 rounded-md py-1 px-2 focus:outline-none">
+                            <option value="subscribers-desc">Subscribers (High to Low)</option>
+                            <option value="subscribers-asc">Subscribers (Low to High)</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- Province Navigation -->
-        <nav class="bg-white py-2 px-4 sm:px-6 lg:px-8 border-t border-gray-200 province-nav">
-            <div class="container mx-auto flex justify-start overflow-x-auto pb-1 gap-2">
-                <a href="#ontario" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Ontario</a>
-                <a href="#quebec" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Quebec</a>
-                <a href="#britishcolumbia" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">British Columbia</a>
-                <a href="#alberta" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Alberta</a>
-                <a href="#manitoba" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Manitoba</a>
-                <a href="#saskatchewan" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Saskatchewan</a>
-                <a href="#novascotia" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Nova Scotia</a>
-                <a href="#newbrunswick" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">New Brunswick</a>
-                <a href="#newfoundland" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Newfoundland</a>
-                <a href="#pei" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">PEI</a>
-                <a href="#territories" class="province-link whitespace-nowrap px-3 py-1 text-sm rounded-full bg-gray-100 hover:bg-gray-200 transition-colors">Territories</a>
-            </div>
-        </nav>
-    </header>
+    </section>
 
     <!-- Main Content -->
     <main class="container mx-auto py-8 px-4 sm:px-6 lg:px-8">
         <!-- Ontario Section -->
         <section id="ontario" class="province-container mb-16 print-break-avoid">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold province-header">Ontario</h2>
-                <p class="text-gray-600 mt-2">Featuring food reviewers from Toronto, Ottawa, and across the province</p>
-            </div>
+            <h2 class="text-2xl font-bold mb-6 category-title">Ontario</h2>
+            <p class="text-gray-600 mt-2 mb-6">Featuring food reviewers from Toronto, Ottawa, and across the province</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- YouTuber Card 1 -->
@@ -421,10 +468,8 @@
 
         <!-- Quebec Section -->
         <section id="quebec" class="province-container mb-16 print-break-avoid">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold province-header">Quebec</h2>
-                <p class="text-gray-600 mt-2">Featuring food reviewers from Quebec City, Montreal, and across the province</p>
-            </div>
+            <h2 class="text-2xl font-bold mb-6 category-title">Quebec</h2>
+            <p class="text-gray-600 mt-2 mb-6">Featuring food reviewers from Quebec City, Montreal, and across the province</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- YouTuber Card 1 -->
@@ -645,10 +690,8 @@
 
         <!-- British Columbia Section -->
         <section id="britishcolumbia" class="province-container mb-16 print-break-avoid">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold province-header">British Columbia</h2>
-                <p class="text-gray-600 mt-2">Featuring food reviewers from Victoria, Vancouver, and across the province</p>
-            </div>
+            <h2 class="text-2xl font-bold mb-6 category-title">British Columbia</h2>
+            <p class="text-gray-600 mt-2 mb-6">Featuring food reviewers from Victoria, Vancouver, and across the province</p>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- YouTuber Card 1 -->
