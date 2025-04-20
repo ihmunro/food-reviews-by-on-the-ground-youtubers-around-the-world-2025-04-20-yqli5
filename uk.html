@@ -1,0 +1,798 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Food Review YouTubers | The Ultimate Directory</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #f1faee;
+            --accent-color: #a8dadc;
+            --text-color: #1d3557;
+            --light-text: #457b9d;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .header-bg {
+            background-color: var(--primary-color);
+            background-image: linear-gradient(135deg, var(--primary-color) 0%, #ff8a65 100%);
+        }
+        
+        .category-title {
+            border-bottom: 3px solid var(--primary-color);
+            display: inline-block;
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: #d32f2f;
+        }
+        
+        .category-badge {
+            background-color: var(--accent-color);
+            color: var(--text-color);
+        }
+        
+        .subscriber-count {
+            color: var(--light-text);
+        }
+        
+        .search-box {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            background-color: white;
+        }
+        
+        .filter-active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        #youtuber-list {
+            min-height: 500px;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.3s;
+            opacity: 0;
+            z-index: 999;
+        }
+        
+         {
+            .no-print {
+                display: none;
+            }
+            
+            .print-break-avoid {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header-bg text-white">
+        <div class="container mx-auto py-8 px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">UK Food Review YouTubers</h1>
+                    <p class="text-lg mt-2 opacity-90">The Ultimate Directory of British Food Content Creators</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#restaurant-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Restaurant</a>
+                    <a href="#street-food-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Street Food</a>
+                    <a href="#product-reviews" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Product</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search & Filters Section -->
+    <section class="py-8 bg-white shadow-sm no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="search-box rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center mb-4">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by name, description or location..." class="w-full py-3 px-4 pl-12 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                            <span class="absolute left-3 top-3 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm font-medium mr-2 mt-1">Filter by:</span>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="all">All</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="restaurant">Restaurant</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="street-food">Street Food</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="takeaway">Takeaway</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="product">Product Reviews</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="mega">1M+ Subs</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="macro">100k-1M Subs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mt-2">
+                    <p id="results-count" class="mr-4">Showing all YouTubers</p>
+                    <div class="flex items-center ml-auto">
+                        <label for="sort-select" class="mr-2">Sort by:</label>
+                        <select id="sort-select" class="bg-gray-100 rounded-md py-1 px-2 focus:outline-none">
+                            <option value="subscribers-desc">Subscribers (High to Low)</option>
+                            <option value="subscribers-asc">Subscribers (Low to High)</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 md:px-6 lg:px-8 py-8">
+        <!-- Restaurant Review YouTubers -->
+        <section id="restaurant-reviews" class="mb-12 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Restaurant Review YouTubers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="restaurant-list">
+                <!-- Restaurant reviewers will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Street Food & Takeaway Review YouTubers -->
+        <section id="street-food-reviews" class="mb-12 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Street Food & Takeaway Reviewers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="street-food-list">
+                <!-- Street food reviewers will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Product Review YouTubers -->
+        <section id="product-reviews" class="mb-12 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">Product Review YouTubers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="product-list">
+                <!-- Product reviewers will be populated here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- General Food YouTubers -->
+        <section id="general-food" class="mb-12 print-break-avoid">
+            <h2 class="text-2xl font-bold mb-6 category-title">General Food YouTubers & Vloggers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="general-list">
+                <!-- General food YouTubers will be populated here by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top no-print" id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-xl font-semibold mb-3">UK Food Review YouTubers</h3>
+                    <p class="text-gray-400">Your comprehensive directory for food content creators in the United Kingdom.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-medium mb-3">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#restaurant-reviews" class="text-gray-400 hover:text-white transition">Restaurant Reviewers</a></li>
+                        <li><a href="#street-food-reviews" class="text-gray-400 hover:text-white transition">Street Food Reviewers</a></li>
+                        <li><a href="#product-reviews" class="text-gray-400 hover:text-white transition">Product Reviewers</a></li>
+                        <li><a href="#general-food" class="text-gray-400 hover:text-white transition">General Food YouTubers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-500">
+                <p>&copy; 2025 UK Food Review YouTubers Directory. All information is regularly updated.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // YouTuber data
+        const youtubers = [
+            // Restaurant Reviewers
+            {
+                name: "Food Review Club",
+                subscribers: "144K",
+                description: "A UK-based channel reviewing restaurants across the UK with honest, real opinions. They cover the best restaurants, street food, fish and chips, Sunday roasts, takeaways & pubs.",
+                youtubeUrl: "https://www.youtube.com/channel/UCE6pncSIQilTxtTyYgtGrrg",
+                category: "restaurant",
+                type: "macro",
+                tags: ["restaurant", "street-food", "takeaway"]
+            },
+            {
+                name: "TOPJAW",
+                subscribers: "403K",
+                description: "Jesse & Will explore and present their favourite things to eat and drink in London and beyond, focusing on unique food experiences and authentic cuisine.",
+                youtubeUrl: "https://www.youtube.com/channel/UCCpSgnO8aTRquhhOHnFdxUg",
+                category: "restaurant",
+                type: "macro",
+                tags: ["restaurant", "street-food", "travel"]
+            },
+            {
+                name: "Gary Eats",
+                subscribers: "252K",
+                description: "Gary previously worked in the Gastropub industry and now travels to different pubs/restaurants throughout the UK to try out their food.",
+                youtubeUrl: "https://www.youtube.com/channel/UC0NBsFubVfkZNnj37i-8dBA",
+                category: "restaurant",
+                type: "macro",
+                tags: ["restaurant", "pub-food"]
+            },
+            {
+                name: "Travel.Eat.Repeat",
+                subscribers: "80.3K",
+                description: "Food and travel channel focusing on culinary experiences in the UK and around the world.",
+                youtubeUrl: "https://www.youtube.com/channel/UC5x2nHUPRgHDLaQ4Qqbg01w",
+                category: "restaurant",
+                type: "micro",
+                tags: ["restaurant", "travel"]
+            },
+            {
+                name: "Rithu The Explorer",
+                subscribers: "2K",
+                description: "Explores the world through travel, cuisine and culture, discovering new types of food from around the globe including restaurants and street food.",
+                youtubeUrl: "https://www.youtube.com/channel/UCG191Gr3eXnbPeJw8U9SyoQ",
+                category: "restaurant",
+                type: "nano",
+                tags: ["restaurant", "travel", "culture"]
+            },
+            {
+                name: "Feed the Lion",
+                subscribers: "9.2K",
+                description: "UK's premier, multi award-winning Halal food news site dedicated to reviewing and finding the best Halal restaurants and food spots.",
+                youtubeUrl: "https://www.youtube.com/channel/UCQXwzONaO6QAZHuMI-yLmTw",
+                category: "restaurant",
+                type: "nano",
+                tags: ["restaurant", "halal", "food-news"]
+            },
+
+            // Street Food & Takeaway Reviewers
+            {
+                name: "Rate My Takeaway",
+                subscribers: "754K",
+                description: "Danny travels across the UK reviewing takeaways and street food. His signature style includes setting up a portable table outside each establishment to enjoy his meal.",
+                youtubeUrl: "https://www.youtube.com/channel/UCd03Ksc7VNypelv_TM3SjSg",
+                category: "street-food",
+                type: "macro",
+                tags: ["takeaway", "street-food"]
+            },
+            {
+                name: "HEYMAN Food Reviews",
+                subscribers: "68.4K",
+                description: "Focuses on finding and reviewing the best halal food options across the UK and worldwide, with a special emphasis on street food and takeaways.",
+                youtubeUrl: "https://www.youtube.com/channel/UCIAQve2to952qeUMynHbfEA",
+                category: "street-food",
+                type: "micro",
+                tags: ["halal", "takeaway", "street-food"]
+            },
+            {
+                name: "TFT - STREET FOOD REVIEWS",
+                subscribers: "19.1K",
+                description: "Reviews street food across the UK, sampling 'The Good, Bad and The Ugly' in the world of fast food and street cuisine.",
+                youtubeUrl: "https://www.youtube.com/channel/UC0QIceiE2Vrt6IeAWHBo37w",
+                category: "street-food",
+                type: "micro",
+                tags: ["street-food", "fast-food"]
+            },
+            {
+                name: "Halal Munchies Reviews",
+                subscribers: "43.2K",
+                description: "Shahrukh from Birmingham reviews halal food options across the UK with the catchphrase 'THAT IS A MUNCH' for exceptional food.",
+                youtubeUrl: "https://www.youtube.com/channel/UCDdqacTOHYZmPtSj4wlkejQ",
+                category: "street-food",
+                type: "micro",
+                tags: ["halal", "takeaway", "street-food"]
+            },
+            {
+                name: "Tracy & Colin - The Foodies",
+                subscribers: "7.6K",
+                description: "A couple who take a tasty look at food outlets far and wide, covering the UK's best takeaways, street food, fish and chips, and restaurants.",
+                youtubeUrl: "https://www.youtube.com/channel/UC9B3ADBLJCSb-WFWE8ydtoQ",
+                category: "street-food",
+                type: "nano",
+                tags: ["takeaway", "street-food", "restaurant"]
+            },
+            {
+                name: "STOCKY BLOKE",
+                subscribers: "8.7K",
+                description: "Greg reviews restaurants, pubs, and takeaways, sharing his findings with viewers on his food journey across the UK.",
+                youtubeUrl: "https://www.youtube.com/channel/UCiHYJOh78nG2eFASUVmnURQ",
+                category: "street-food",
+                type: "nano",
+                tags: ["restaurant", "takeaway", "pub-food"]
+            },
+            {
+                name: "Just Deano",
+                subscribers: "22.3K",
+                description: "Offers food and travel vlogs, from reviewing ready meals in his kitchen to travelling to worldwide destinations for food adventures.",
+                youtubeUrl: "https://www.youtube.com/channel/UCmwmLPNSdpX5Y4N6H05nkPA",
+                category: "street-food",
+                type: "micro",
+                tags: ["ready-meals", "travel", "food-review"]
+            },
+            {
+                name: "Dad Loves Food",
+                subscribers: "16.9K",
+                description: "Provides food and hotel reviews with occasional eating challenges in between.",
+                youtubeUrl: "https://www.youtube.com/channel/UCnHal1dOwkmTCilAkR0zZIA",
+                category: "street-food",
+                type: "micro",
+                tags: ["restaurant", "hotel", "challenges"]
+            },
+
+            // Product Reviewers
+            {
+                name: "Food Review UK",
+                subscribers: "43.2K",
+                description: "Reviews all manner of food products from classic, well-known worldwide brands to smaller products. Combines informative reviews with humor.",
+                youtubeUrl: "https://www.youtube.com/channel/UCwYOFq7ytT-jMWL5cAoqDow",
+                category: "product",
+                type: "micro",
+                tags: ["snacks", "product-review", "food-fusion"]
+            },
+            {
+                name: "Bald Foodie Guy",
+                subscribers: "115K",
+                description: "Reviews new and old food products available in UK supermarkets, along with the occasional pie shop and fish & chips reviews.",
+                youtubeUrl: "https://www.youtube.com/channel/UC6J3bDTVWzJ10XBfNtq-qYA",
+                category: "product",
+                type: "macro",
+                tags: ["supermarket", "product-review"]
+            },
+            {
+                name: "Bad Food Blog",
+                subscribers: "2.5K",
+                description: "Focused on reviewing 'bad food' found in supermarkets and takeaways. A humorous take on disappointing food products.",
+                youtubeUrl: "https://www.youtube.com/channel/UCE_I7pdtgio_bStSnYgHs3A",
+                category: "product",
+                type: "nano",
+                tags: ["bad-food", "supermarket", "humor"]
+            },
+            {
+                name: "Got2EatPizza",
+                subscribers: "21.2K",
+                description: "Focuses on reviewing pizza ovens and pizza tools, providing tips from learning experiences and making homemade pizza dough.",
+                youtubeUrl: "https://www.youtube.com/channel/UCkos6BYb-N5Y1bN5qfLR4sg",
+                category: "product",
+                type: "micro",
+                tags: ["pizza", "cooking-equipment", "reviews"]
+            },
+            {
+                name: "Uk Pizza and more",
+                subscribers: "7.7K",
+                description: "Reviews pizza products and places across the UK, with a focus on both homemade and takeaway pizza options.",
+                youtubeUrl: "https://www.youtube.com/channel/UCXajB6z_NilkRaqPQyWoiBg",
+                category: "product",
+                type: "nano",
+                tags: ["pizza", "takeaway", "product-review"]
+            },
+            {
+                name: "Budget Cooking UK",
+                subscribers: "33.4K",
+                description: "Kerry cooks and reviews budget-friendly foods using air fryers, microwaves, slow cookers, focusing on cost-effective meals during the cost of living crisis.",
+                youtubeUrl: "https://www.youtube.com/channel/UCCkXmSdzv6N1jc1YZzp7N9A",
+                category: "product",
+                type: "micro",
+                tags: ["budget", "cooking", "product-review"]
+            },
+            {
+                name: "Clifton Chilli Club",
+                subscribers: "782K",
+                description: "One of the world's largest chilli channels, providing chili eating challenges & contests, product reviews, growing guides, and cooking videos.",
+                youtubeUrl: "https://www.youtube.com/channel/UCDLqJTA7dTQG2kCB2T266_w",
+                category: "product",
+                type: "macro",
+                tags: ["chilli", "challenges", "product-review"]
+            },
+            {
+                name: "UK Chilli Queen",
+                subscribers: "22.9K",
+                description: "Focuses on chilli-eating competitions, hot sauce reviews, and foodie travels, showcasing the spicy side of UK food culture.",
+                youtubeUrl: "https://www.youtube.com/channel/UCymwp_kXb8MjgtShGU-PaQ",
+                category: "product",
+                type: "micro",
+                tags: ["chilli", "hot-sauce", "challenges"]
+            },
+
+            // General Food YouTubers & Vloggers
+            {
+                name: "BeardMeatsFood",
+                subscribers: "5M",
+                description: "Britain's competitive eater who takes on various eating challenges, stunts and records. Known for his impressive capacity and entertaining style.",
+                youtubeUrl: "https://www.youtube.com/channel/UCc9CjaAjsMMvaSghZB7-Kog",
+                category: "general",
+                type: "mega",
+                tags: ["competitive-eating", "challenges", "food-stunts"]
+            },
+            {
+                name: "Sorted Food",
+                subscribers: "2.9M",
+                description: "A group of friends who battle to become awesome home cooks. They explore, learn and have fun around food, creating accessible content for both chefs and 'normals'.",
+                youtubeUrl: "https://www.youtube.com/channel/UCfyehHM_eo4g5JUyWmms2LA",
+                category: "general",
+                type: "mega",
+                tags: ["cooking", "food-challenges", "recipes"]
+            },
+            {
+                name: "Jamie Oliver",
+                subscribers: "6M",
+                description: "Celebrity chef Jamie Oliver's channel featuring beautiful recipes, expert tutorials, fresh talent, and entertaining food videos.",
+                youtubeUrl: "https://www.youtube.com/channel/UCpSgg_ECBj25s9moCDfSTsA",
+                category: "general",
+                type: "mega",
+                tags: ["celebrity-chef", "recipes", "cooking-tutorials"]
+            },
+            {
+                name: "JOLLY",
+                subscribers: "4.5M",
+                description: "Josh and Ollie (two best friends) create food content that's fun and engaging. Originally known for introducing Korean culture on another channel called Korean Englishman.",
+                youtubeUrl: "https://www.youtube.com/channel/UCOgGAfSUy5LvEyVS_LF5kdw",
+                category: "general",
+                type: "mega",
+                tags: ["food-entertainment", "cultural-food", "challenges"]
+            },
+            {
+                name: "Leah Shutkever",
+                subscribers: "563K",
+                description: "UK Female competitive eater taking on various food challenges and setting records, aiming for the No.1 UK title.",
+                youtubeUrl: "https://www.youtube.com/channel/UC0dlQ2xYj2kw7BiE1HAygLw",
+                category: "general",
+                type: "macro",
+                tags: ["competitive-eating", "challenges", "food-stunts"]
+            },
+            {
+                name: "CNSR",
+                subscribers: "862K",
+                description: "Self-described as 'primarily a fried chicken journalist for the mandem'. Reviews fried chicken spots across the UK with a distinctive style.",
+                youtubeUrl: "https://www.youtube.com/channel/UCZFmxd9L1btyXig-2Dp9XnA",
+                category: "general",
+                type: "macro",
+                tags: ["fried-chicken", "street-food", "takeaway"]
+            },
+            {
+                name: "McBang ASMR",
+                subscribers: "5.7M",
+                description: "ASMR food content creator focusing on eating sounds and visuals with various UK and international foods.",
+                youtubeUrl: "https://www.youtube.com/channel/UCzXipoEpmE2VVOWtuTGc_Hw",
+                category: "general",
+                type: "mega",
+                tags: ["asmr", "eating-sounds", "mukbang"]
+            },
+            {
+                name: "Eat with Coral Blush",
+                subscribers: "9.4K",
+                description: "Mukbang and food review content featuring a variety of UK and international cuisines in an intimate, ASMR-friendly format.",
+                youtubeUrl: "https://www.youtube.com/channel/UC-J_suM1ejtdnoPNiZtmIew",
+                category: "general",
+                type: "nano",
+                tags: ["mukbang", "asmr", "food-review"]
+            },
+            {
+                name: "MrT",
+                subscribers: "237K",
+                description: "Tibor, a Hungarian chef based in the UK, creates videos about food preparation and service, sometimes showing behind-the-scenes of his work as a chef manager.",
+                youtubeUrl: "https://www.youtube.com/channel/UCiCSgeyjrVsQtk_wNQQaH8g",
+                category: "general",
+                type: "macro",
+                tags: ["chef", "cooking", "behind-the-scenes"]
+            },
+            {
+                name: "Hunter Gatherer Cooking UK",
+                subscribers: "129K",
+                description: "Focuses on finding good quality, honest food from various sources - supermarkets, farm shops, or home-grown - with an emphasis on ethical sourcing.",
+                youtubeUrl: "https://www.youtube.com/channel/UCdFDMz4wVDQ-ytrLobvxPMQ",
+                category: "general",
+                type: "macro",
+                tags: ["ethical-food", "sourcing", "cooking"]
+            },
+            {
+                name: "Chef Elizabeth Haigh",
+                subscribers: "235K",
+                description: "Elizabeth Haigh shares her life and recipes as a modern chef - the owner of Mei Mei (London) focusing on Singaporean cuisine with a modern twist.",
+                youtubeUrl: "https://www.youtube.com/channel/UCb8LarW5A2T-zKUBgFdFo4g",
+                category: "general",
+                type: "macro",
+                tags: ["chef", "Singaporean-cuisine", "recipes"]
+            },
+            {
+                name: "Nuttyfoodiefitness",
+                subscribers: "180K",
+                description: "Food and fitness content with a special love for peanut butter. Combines nutritional information with tasty recipes and fitness advice.",
+                youtubeUrl: "https://www.youtube.com/channel/UCRxpsG86WXrtG-F2WmThsmw",
+                category: "general",
+                type: "macro",
+                tags: ["fitness", "healthy-eating", "recipes"]
+            },
+            {
+                name: "My Little Kitchen",
+                subscribers: "113K",
+                description: "Shamza creates recipes that are quick and easy to follow but taste exceptionally good, featuring dishes from across the globe including traditional family recipes.",
+                youtubeUrl: "https://www.youtube.com/channel/UCPnl3oL-17YuqSXccu5A1rw",
+                category: "general",
+                type: "macro",
+                tags: ["recipes", "cooking", "fusion"]
+            },
+            {
+                name: "Kay's Cooking",
+                subscribers: "318K",
+                description: "A homestyle cooking channel featuring traditional British dishes and comfort food, presented in a simple, approachable way.",
+                youtubeUrl: "https://www.youtube.com/channel/UCEEmgAo0xP-2sz_vcjCwqnA",
+                category: "general",
+                type: "macro",
+                tags: ["homestyle", "British-cuisine", "comfort-food"]
+            }
+        ];
+
+        // DOM Elements
+        const restaurantList = document.getElementById('restaurant-list');
+        const streetFoodList = document.getElementById('street-food-list');
+        const productList = document.getElementById('product-list');
+        const generalList = document.getElementById('general-list');
+        const searchInput = document.getElementById('search-input');
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const sortSelect = document.getElementById('sort-select');
+        const resultsCount = document.getElementById('results-count');
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Initialize
+        function init() {
+            sortAndDisplayYoutubers();
+            setupEventListeners();
+        }
+
+        // Create YouTuber Card
+        function createYoutuberCard(youtuber) {
+            const card = document.createElement('div');
+            card.className = 'card bg-white rounded-xl shadow-md overflow-hidden h-full youtuber-card';
+            card.dataset.category = youtuber.category;
+            card.dataset.type = youtuber.type;
+            card.dataset.tags = youtuber.tags.join(' ');
+            card.dataset.name = youtuber.name.toLowerCase();
+            card.dataset.subscribers = getSubscriberCount(youtuber.subscribers);
+
+            // Set HTML content
+            card.innerHTML = `
+                <div class="p-6 flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-3">
+                        <h3 class="text-xl font-semibold">${youtuber.name}</h3>
+                        <span class="bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium subscriber-count">${youtuber.subscribers} Subscribers</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 flex-grow">${youtuber.description}</p>
+                    <div class="mt-auto">
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${youtuber.tags.map(tag => `<span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">${formatTag(tag)}</span>`).join('')}
+                        </div>
+                        <a href="${youtuber.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="btn-primary w-full py-2 px-4 rounded-lg text-center inline-block transition">
+                            <i class="fab fa-youtube mr-2"></i>Visit Channel
+                        </a>
+                    </div>
+                </div>
+            `;
+
+            return card;
+        }
+
+        // Format tag for display
+        function formatTag(tag) {
+            return tag.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+        }
+
+        // Get subscriber count in numbers for sorting
+        function getSubscriberCount(subscriberString) {
+            const num = parseFloat(subscriberString);
+            if (subscriberString.includes('M')) {
+                return num * 1000000;
+            } else if (subscriberString.includes('K')) {
+                return num * 1000;
+            }
+            return num;
+        }
+
+        // Sort and display YouTubers
+        function sortAndDisplayYoutubers(filterCategory = 'all') {
+            // Clear existing cards
+            restaurantList.innerHTML = '';
+            streetFoodList.innerHTML = '';
+            productList.innerHTML = '';
+            generalList.innerHTML = '';
+
+            // Sort based on selected option
+            const sortValue = sortSelect.value;
+            const sortedYoutubers = [...youtubers].sort((a, b) => {
+                if (sortValue === 'subscribers-desc') {
+                    return getSubscriberCount(b.subscribers) - getSubscriberCount(a.subscribers);
+                } else if (sortValue === 'subscribers-asc') {
+                    return getSubscriberCount(a.subscribers) - getSubscriberCount(b.subscribers);
+                } else if (sortValue === 'name-asc') {
+                    return a.name.localeCompare(b.name);
+                } else if (sortValue === 'name-desc') {
+                    return b.name.localeCompare(a.name);
+                }
+                return 0;
+            });
+
+            // Filter and display cards
+            let visibleCount = 0;
+            
+            sortedYoutubers.forEach(youtuber => {
+                const card = createYoutuberCard(youtuber);
+                let isVisible = true;
+                
+                // Apply filters
+                if (filterCategory !== 'all') {
+                    if (filterCategory === 'mega' || filterCategory === 'macro') {
+                        isVisible = youtuber.type === filterCategory;
+                    } else {
+                        isVisible = youtuber.tags.includes(filterCategory) || youtuber.category === filterCategory;
+                    }
+                }
+                
+                // Apply search
+                const searchTerm = searchInput.value.toLowerCase();
+                if (searchTerm !== '') {
+                    const nameMatch = youtuber.name.toLowerCase().includes(searchTerm);
+                    const descMatch = youtuber.description.toLowerCase().includes(searchTerm);
+                    const tagMatch = youtuber.tags.some(tag => tag.toLowerCase().includes(searchTerm));
+                    
+                    isVisible = isVisible && (nameMatch || descMatch || tagMatch);
+                }
+                
+                // Show/hide based on filters
+                if (isVisible) {
+                    if (youtuber.category === 'restaurant') {
+                        restaurantList.appendChild(card);
+                    } else if (youtuber.category === 'street-food') {
+                        streetFoodList.appendChild(card);
+                    } else if (youtuber.category === 'product') {
+                        productList.appendChild(card);
+                    } else if (youtuber.category === 'general') {
+                        generalList.appendChild(card);
+                    }
+                    visibleCount++;
+                }
+            });
+            
+            // Hide empty sections
+            toggleSectionVisibility(restaurantList, 'restaurant-reviews');
+            toggleSectionVisibility(streetFoodList, 'street-food-reviews');
+            toggleSectionVisibility(productList, 'product-reviews');
+            toggleSectionVisibility(generalList, 'general-food');
+            
+            // Update results count text
+            updateResultsCount(visibleCount);
+        }
+
+        // Toggle section visibility
+        function toggleSectionVisibility(container, sectionId) {
+            const section = document.getElementById(sectionId);
+            if (container.children.length === 0) {
+                section.style.display = 'none';
+            } else {
+                section.style.display = 'block';
+            }
+        }
+
+        // Update results count
+        function updateResultsCount(count) {
+            if (count === youtubers.length) {
+                resultsCount.textContent = `Showing all ${count} YouTubers`;
+            } else {
+                resultsCount.textContent = `Showing ${count} of ${youtubers.length} YouTubers`;
+            }
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            // Search input
+            searchInput.addEventListener('input', () => {
+                sortAndDisplayYoutubers(getActiveFilter());
+            });
+            
+            // Filter buttons
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('filter-active'));
+                    // Add active class to clicked button
+                    button.classList.add('filter-active');
+                    // Apply filter
+                    sortAndDisplayYoutubers(button.dataset.filter);
+                });
+            });
+            
+            // Sort select
+            sortSelect.addEventListener('change', () => {
+                sortAndDisplayYoutubers(getActiveFilter());
+            });
+            
+            // Back to top button
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopButton.style.opacity = '1';
+                } else {
+                    backToTopButton.style.opacity = '0';
+                }
+            });
+            
+            backToTopButton.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Get active filter
+        function getActiveFilter() {
+            const activeButton = document.querySelector('.filter-btn.filter-active');
+            return activeButton ? activeButton.dataset.filter : 'all';
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', init);
+        
+        // Set the first filter button as active initially
+        document.addEventListener('DOMContentLoaded', () => {
+            filterButtons[0].classList.add('filter-active');
+        });
+    </script>
+</body>
+</html>
+   
+    
