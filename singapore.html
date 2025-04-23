@@ -173,128 +173,68 @@
         data-ad-client="ca-pub-5037631667606914">
 </amp-auto-ads>
     <!-- Header Section -->
-    <header class="header-bg py-12 px-4 text-center">
-        <div class="container mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
-                <div class="mb-6 md:mb-0 text-center md:text-left">
-                    <h1 class="text-4xl md:text-5xl font-bold mb-4">Singapore Food Review YouTubers</h1>
-                    <p class="text-xl opacity-90">The ultimate directory of food reviewers exploring Singapore's diverse culinary landscape</p>
+    <header class="header-bg text-white">
+        <div class="container mx-auto py-8 px-4 md:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h1 class="text-3xl md:text-4xl font-bold">Singapore Food Review YouTubers</h1>
+                    <p class="text-lg mt-2 opacity-90">The Ultimate Directory</p>
                 </div>
                 <div class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-4">
                     <a href="index.html" class="px-4 py-2 bg-white text-red-600 font-medium rounded-lg hover:bg-opacity-90 transition flex items-center justify-center md:justify-start">
                         <i class="fas fa-arrow-left mr-2"></i> Back to Home
                     </a>
-                </div>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4 mb-6">
-                <div class="flex items-center bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <i class="fas fa-utensils mr-2"></i>
-                    <span class="font-medium">10 Categories</span>
-                </div>
-                <div class="flex items-center bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <i class="fas fa-user-friends mr-2"></i>
-                    <span class="font-medium">100+ Reviewers</span>
-                </div>
-                <div class="flex items-center bg-white bg-opacity-20 rounded-lg px-4 py-2">
-                    <i class="fas fa-globe-asia mr-2"></i>
-                    <span class="font-medium">Local & International</span>
-                </div>
-            </div>
-            <div class="relative mx-auto max-w-3xl">
-                <input type="text" id="search" placeholder="Search by name, category, or description..." class="w-full px-6 py-3 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-red-400">
-                <button id="filter-btn" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-gray-700">
-                    <i class="fas fa-filter"></i>
-                </button>
-            </div>
-            <div id="filter-container" class="hidden bg-white rounded-lg shadow-lg p-4 mt-2 mx-auto max-w-3xl text-left">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <div>
-                        <h3 class="font-semibold text-gray-700 mb-2">By Category</h3>
-                        <div class="space-y-1">
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="hawker">
-                                Hawker Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="restaurant">
-                                Restaurant
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="street">
-                                Street Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="chinese">
-                                Chinese Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="malay">
-                                Malay Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="indian">
-                                Indian Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="peranakan">
-                                Peranakan Food
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="dessert">
-                                Desserts
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="seafood">
-                                Seafood
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="category-filter mr-2" value="vegetarian">
-                                Vegetarian/Vegan
-                            </label>
-                        </div>
+                    <div class="flex space-x-2 md:space-x-4">
+                        <a href="#hawker" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Hawker</a>
+                        <a href="#restaurant" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Restaurant</a>
+                        <a href="#street" class="px-4 py-2 bg-white bg-opacity-20 rounded-lg hover:bg-opacity-30 transition">Street Food</a>
                     </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-700 mb-2">By Subscriber Count</h3>
-                        <div class="space-y-1">
-                            <label class="flex items-center">
-                                <input type="checkbox" class="subscriber-filter mr-2" value="mega">
-                                Mega (1M+)
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="subscriber-filter mr-2" value="macro">
-                                Macro (100K-1M)
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="subscriber-filter mr-2" value="micro">
-                                Micro (10K-100K)
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="subscriber-filter mr-2" value="nano">
-                                Nano (under 10K)
-                            </label>
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="font-semibold text-gray-700 mb-2">By Location</h3>
-                        <div class="space-y-1">
-                            <label class="flex items-center">
-                                <input type="checkbox" class="location-filter mr-2" value="local">
-                                Singaporean
-                            </label>
-                            <label class="flex items-center">
-                                <input type="checkbox" class="location-filter mr-2" value="international">
-                                International
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex justify-end mt-4">
-                    <button id="clear-filters" class="px-4 py-2 text-gray-600 hover:text-gray-800">Clear All</button>
-                    <button id="apply-filters" class="ml-2 px-4 py-2 bg-primary btn-primary rounded">Apply Filters</button>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Search & Filters Section -->
+    <section class="py-8 bg-white shadow-sm no-print">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="search-box rounded-xl p-6">
+                <div class="flex flex-col md:flex-row md:items-center mb-4">
+                    <div class="w-full md:w-1/2 mb-4 md:mb-0 md:mr-4">
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by name, description or location..." class="w-full py-3 px-4 pl-12 bg-gray-100 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+                            <span class="absolute left-3 top-3 text-gray-400">
+                                <i class="fas fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-sm font-medium mr-2 mt-1">Filter by:</span>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="all">All</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="hawker">Hawker</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="restaurant">Restaurant</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="street">Street Food</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="chinese">Chinese</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="mega">1M+ Subs</button>
+                            <button class="filter-btn py-1 px-3 rounded-full text-sm bg-gray-200 hover:bg-red-400 hover:text-white transition" data-filter="macro">100k-1M Subs</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center text-sm text-gray-500 mt-2">
+                    <p id="results-count" class="mr-4">Showing all YouTubers</p>
+                    <div class="flex items-center ml-auto">
+                        <label for="sort-select" class="mr-2">Sort by:</label>
+                        <select id="sort-select" class="bg-gray-100 rounded-md py-1 px-2 focus:outline-none">
+                            <option value="subscribers-desc">Subscribers (High to Low)</option>
+                            <option value="subscribers-asc">Subscribers (Low to High)</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <main class="container mx-auto px-4 py-8">
         <div id="intro" class="text-center mb-12">
@@ -1940,87 +1880,127 @@
             (adsbygoogle = window.adsbygoogle || []).push({});
         });
 
-        // Filter functionality
+        // Search and filter functionality
         document.addEventListener('DOMContentLoaded', function() {
-            const filterBtn = document.getElementById('filter-btn');
-            const filterContainer = document.getElementById('filter-container');
-            const searchInput = document.getElementById('search');
-            const clearFiltersBtn = document.getElementById('clear-filters');
-            const applyFiltersBtn = document.getElementById('apply-filters');
-            const categoryFilters = document.querySelectorAll('.category-filter');
-            const subscriberFilters = document.querySelectorAll('.subscriber-filter');
-            const locationFilters = document.querySelectorAll('.location-filter');
-            const sections = document.querySelectorAll('section[data-category]');
-            const cards = document.querySelectorAll('.card');
+            // Search functionality
+            document.getElementById('search-input').addEventListener('keyup', function() {
+                let searchValue = this.value.toLowerCase();
+                let cards = document.querySelectorAll('.card');
 
-            // Toggle filter container
-            filterBtn.addEventListener('click', function() {
-                filterContainer.classList.toggle('show');
-                filterContainer.classList.toggle('hidden');
-            });
+                cards.forEach(function(card) {
+                    let title = card.querySelector('h3').textContent.toLowerCase();
+                    let content = card.querySelector('p').textContent.toLowerCase();
 
-            // Apply filters
-            function applyFilters() {
-                const searchTerm = searchInput.value.toLowerCase();
-                const selectedCategories = Array.from(categoryFilters)
-                    .filter(filter => filter.checked)
-                    .map(filter => filter.value);
-                const selectedSubscribers = Array.from(subscriberFilters)
-                    .filter(filter => filter.checked)
-                    .map(filter => filter.value);
-                const selectedLocations = Array.from(locationFilters)
-                    .filter(filter => filter.checked)
-                    .map(filter => filter.value);
-
-                // Show/hide cards based on filters
-                cards.forEach(card => {
-                    const cardText = card.textContent.toLowerCase();
-                    const matchesSearch = searchTerm === '' || cardText.includes(searchTerm);
-                    const subscriberSize = card.getAttribute('data-subscribers');
-                    const location = card.getAttribute('data-location');
-                    const section = card.closest('section');
-                    const category = section.getAttribute('data-category');
-
-                    const matchesCategory = selectedCategories.length === 0 || selectedCategories.includes(category);
-                    const matchesSubscriber = selectedSubscribers.length === 0 || selectedSubscribers.includes(subscriberSize);
-                    const matchesLocation = selectedLocations.length === 0 || selectedLocations.includes(location);
-
-                    if (matchesSearch && matchesCategory && matchesSubscriber && matchesLocation) {
+                    if (title.includes(searchValue) || content.includes(searchValue)) {
                         card.style.display = 'block';
                     } else {
                         card.style.display = 'none';
                     }
                 });
 
-                // Show/hide sections based on visible cards
-                sections.forEach(section => {
-                    const visibleCards = section.querySelectorAll('.card[style="display: block;"]');
-                    if (visibleCards.length === 0) {
-                        section.style.display = 'none';
+                updateResultsCount();
+            });
+
+            // Category filtering
+            document.querySelectorAll('.filter-btn[data-filter]').forEach(function(button) {
+                button.addEventListener('click', function() {
+                    let filterValue = this.getAttribute('data-filter');
+
+                    // Toggle active class
+                    document.querySelectorAll('.filter-btn[data-filter]').forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter cards
+                    let cards = document.querySelectorAll('.card');
+                    let sections = document.querySelectorAll('section[data-category]');
+
+                    if (filterValue === 'all') {
+                        // Show all cards and sections
+                        cards.forEach(card => card.style.display = 'block');
+                        sections.forEach(section => section.style.display = 'block');
+                    } else if (filterValue === 'mega' || filterValue === 'macro') {
+                        // Filter by subscriber count
+                        cards.forEach(function(card) {
+                            if (card.getAttribute('data-subscribers') === filterValue) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        });
+
+                        // Show all sections
+                        sections.forEach(section => section.style.display = 'block');
                     } else {
-                        section.style.display = 'block';
+                        // Filter by category
+                        sections.forEach(function(section) {
+                            if (section.getAttribute('data-category') === filterValue) {
+                                section.style.display = 'block';
+                                section.querySelectorAll('.card').forEach(card => card.style.display = 'block');
+                            } else {
+                                section.style.display = 'none';
+                            }
+                        });
                     }
+
+                    updateResultsCount();
                 });
+            });
+
+            // Add sorting functionality
+            document.getElementById('sort-select').addEventListener('change', function() {
+                const sortValue = this.value;
+                const sections = document.querySelectorAll('section[data-category]');
+
+                sections.forEach(section => {
+                    const cards = Array.from(section.querySelectorAll('.card'));
+                    const container = cards[0].parentNode;
+
+                    // Sort the cards
+                    cards.sort((a, b) => {
+                        if (sortValue === 'subscribers-desc') {
+                            const aCount = parseInt(a.querySelector('.subscriber-badge').textContent.replace(/[^0-9]/g, ''));
+                            const bCount = parseInt(b.querySelector('.subscriber-badge').textContent.replace(/[^0-9]/g, ''));
+                            return bCount - aCount;
+                        } else if (sortValue === 'subscribers-asc') {
+                            const aCount = parseInt(a.querySelector('.subscriber-badge').textContent.replace(/[^0-9]/g, ''));
+                            const bCount = parseInt(b.querySelector('.subscriber-badge').textContent.replace(/[^0-9]/g, ''));
+                            return aCount - bCount;
+                        } else if (sortValue === 'name-asc') {
+                            const aName = a.querySelector('h3').textContent.toLowerCase();
+                            const bName = b.querySelector('h3').textContent.toLowerCase();
+                            return aName.localeCompare(bName);
+                        } else if (sortValue === 'name-desc') {
+                            const aName = a.querySelector('h3').textContent.toLowerCase();
+                            const bName = b.querySelector('h3').textContent.toLowerCase();
+                            return bName.localeCompare(aName);
+                        }
+                    });
+
+                    // Remove all cards
+                    cards.forEach(card => card.remove());
+
+                    // Add sorted cards back
+                    cards.forEach(card => container.appendChild(card));
+                });
+            });
+
+            // Update results count
+            function updateResultsCount() {
+                const visibleCards = document.querySelectorAll('.card[style="display: block"]').length;
+                const totalCards = document.querySelectorAll('.card').length;
+                const resultsCountElement = document.getElementById('results-count');
+
+                if (resultsCountElement) {
+                    if (visibleCards === totalCards) {
+                        resultsCountElement.textContent = `Showing all ${totalCards} YouTubers`;
+                    } else {
+                        resultsCountElement.textContent = `Showing ${visibleCards} of ${totalCards} YouTubers`;
+                    }
+                }
             }
 
-            // Search functionality
-            searchInput.addEventListener('input', applyFilters);
-
-            // Apply filters button
-            applyFiltersBtn.addEventListener('click', function() {
-                applyFilters();
-                filterContainer.classList.add('hidden');
-                filterContainer.classList.remove('show');
-            });
-
-            // Clear filters button
-            clearFiltersBtn.addEventListener('click', function() {
-                searchInput.value = '';
-                categoryFilters.forEach(filter => filter.checked = false);
-                subscriberFilters.forEach(filter => filter.checked = false);
-                locationFilters.forEach(filter => filter.checked = false);
-                applyFilters();
-            });
+            // Initialize results count
+            updateResultsCount();
         });
     </script>
 </body>

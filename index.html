@@ -29,8 +29,114 @@
       "description": "Authentic food reviews by YouTubers from around the world",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://ytfoodreviews.com/search?q={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://ytfoodreviews.com/search?q={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- Organization Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "YT Food Reviews",
+      "url": "https://ytfoodreviews.com",
+      "logo": "https://ytfoodreviews.com/logo.png",
+      "description": "Authentic food reviews by YouTubers from around the world",
+      "sameAs": [
+        "https://twitter.com/ytfoodreviews",
+        "https://facebook.com/ytfoodreviews",
+        "https://instagram.com/ytfoodreviews"
+      ]
+    }
+    </script>
+
+    <!-- Webpage Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "YT Food Reviews - Authentic Food Reviews by YouTubers Around the World",
+      "description": "Discover the best restaurants and food spots worldwide through authentic reviews by local YouTubers. Find honest food reviews from UK, USA, Canada, Europe, India, Dubai and more.",
+      "url": "https://ytfoodreviews.com",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "YT Food Reviews",
+        "url": "https://ytfoodreviews.com"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Food Reviews",
+        "description": "Authentic food reviews by YouTubers from around the world"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "Article",
+              "name": "UK Food Reviews",
+              "url": "https://ytfoodreviews.com/uk.html",
+              "description": "Authentic food reviews across the United Kingdom by top local YouTubers"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "Article",
+              "name": "USA Food Reviews",
+              "url": "https://ytfoodreviews.com/usa.html",
+              "description": "Discover American cuisine through the eyes of passionate food vloggers"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "Article",
+              "name": "Canadian Food Reviews",
+              "url": "https://ytfoodreviews.com/canada.html",
+              "description": "Explore Canada's diverse culinary scene with local YouTubers"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Article",
+              "name": "Thailand Food Reviews",
+              "url": "https://ytfoodreviews.com/thailand.html",
+              "description": "Experience Thailand rich culinary traditions through authentic reviews"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Article",
+              "name": "Singapore Food Reviews",
+              "url": "https://ytfoodreviews.com/singapore.html",
+              "description": "Explore Singapore's vibrant street food and restaurant scene"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Article",
+              "name": "Dubai Food Reviews",
+              "url": "https://ytfoodreviews.com/dubai.html",
+              "description": "Discover luxury dining and hidden gems in Dubai's food scene"
+            }
+          }
+        ]
       }
     }
     </script>
